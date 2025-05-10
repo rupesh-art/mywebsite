@@ -1,0 +1,2091 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santa-Katha</title>
+    <link rel="shortcut icon" href="C:\Users\srira\Downloads\R.png" type="image/x-icon">
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+        }
+        body{
+         
+        justify-content: center;
+    align-items: center;
+}
+         
+       .w{
+    animation: vs 4s ease-in-out;
+    
+    color: ;
+        }
+        @keyframes vs{
+            0%{
+                color: aliceblue;
+margin-top: 0%;
+
+            }
+            25%{
+                color: black;
+                margin-left: 60%;
+                font-size: 50px;
+            }
+            50%{
+                color: black;
+                margin-top: 20%;
+                font-size: 60px;
+            }
+           75%{
+            color: black;
+                margin-right: 30%;
+                font-size: 70px;
+            }
+            100%{
+                font-size: 200px;
+                color: white;
+                margin-bottom: 80%;
+                background-color:;
+            }
+           
+        }
+        nav{
+            background: black;
+            padding: 15px;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+            
+      
+           ;
+        }
+        a{
+            
+            margin-left: 33px;
+            text-decoration: none;
+            color: white;
+            font-family: serif;
+            font-size: 30px;
+            scroll-behavior: ;
+        }
+        .search-box{
+            margin-left: 404px;
+        }
+        #search{
+            padding: 5px;
+            border-radius: 2%;
+            box-shadow: transparent;
+            background-color: black;
+            outline-color: white;
+            color: white;
+            border-color: white;
+            
+        }
+        #search1{
+            
+            background: transparent;
+            color: white;
+            border-color: white; 
+            border-radius: 10%;
+            height: 40px;
+            width: 100px;
+            cursor: pointer;
+            outline-color: black;
+
+
+        }
+        .box{
+          
+            stroke: black;
+            border: 5px silver solid ;
+            background: transparent;
+            width: 300px;
+            height: 200px;
+            border-radius: 10%;
+            text-align: left;
+            font-size: xx-large;
+            font: bold;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            top: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;  
+               
+            ;
+            
+    
+        }
+        .a1{
+            display: grid;
+            grid-template-columns: auto auto  auto auto;
+            row-gap: 30px;
+            column-gap: 30px;
+            justify-content: center;
+            align-items: center
+            
+            ;
+
+        }
+        .box:hover{
+            scale: 1.5;
+        }
+        img{
+      justify-content: center;
+      align-items: center;
+    
+        }
+        mark {
+    background-color: yellow;
+    color: black;
+    padding: 0 2px;
+}
+        
+    </style>
+    
+</head>
+<body>
+    <nav>
+        <div>
+            <img src="C:\Users\srira\Documents\XX.png" alt="" style="height: 40px; width: 150px; padding: 0px;">
+       
+        </div>
+
+      
+        <a href="#g" >Contact Us </a>
+        <div class="search-box">
+<input type="text" id="search" placeholder="Find....">
+
+
+<button id="search1" onclick="searchText()">Search</button>
+
+
+        </div 
+        >
+        
+    </nav>
+    <br>
+    <br>
+    <div class="w" style="color: white;">
+        Lives Of Saints
+        
+                </div>
+                
+    <br>
+    <div class="a1"> 
+ <div class="box" ><a href="#a" style="color: black; " > <img src="C:\Users\srira\Downloads\AnyConv.com__JAYDEV.jpeg"  alt="" style="height: 150px; width: 200px;">Jayadeva Goswami</div></a>
+<div class="box"> <a href="#b" style="color: black;"> <img src="C:\Users\srira\Downloads\AnyConv.com__GADADHAR 2.jpeg" alt="" style="height: 150px; width: 200px;">Gadadhara Pandit</div></a>
+<div class="box"><a href="#c" style="color: black;"> <img src="C:\Users\srira\Downloads\AnyConv.com__ABHIRAM 1.jpeg" alt=""style="height: 150px; width: 200px;"><br>Abhirama Thakura</div></a>
+<div class="box"><a href="#d" style="color: black;"> <img src="C:\Users\srira\Downloads\AnyConv.com__RAMANUJA.jpeg" alt=""style="height: 150px; width: 200px;">Ramanujacarya</div> </a>
+<div class="box"><a href="#e" style="color: black;"><img src="C:\Users\srira\Downloads\AnyConv.com__MADHWA 1.jpeg" alt=""style="height: 150px; width: 200px;">Madhwacarya</div></a>
+<div class="box"><a href="#f" style="color: black;"><img src="C:\Users\srira\Downloads\AnyConv.com__BALDEV.jpeg" alt=""style="height: 150px; width: 200px;">Acarya Baladeva </div> </a>
+    
+</div>
+<br>
+<br>
+<script>
+function highlightTextInDocument(searchTerm) {
+    if (!searchTerm) return;
+
+    const regex = new RegExp(`(${searchTerm})`, 'gi');
+
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+        acceptNode: function(node) {
+            // Skip script/style tags and empty nodes
+            const parentTag = node.parentNode.tagName;
+            if (
+                parentTag !== "SCRIPT" &&
+                parentTag !== "STYLE" &&
+                node.nodeValue.trim() !== ""
+            ) {
+                return NodeFilter.FILTER_ACCEPT;
+            }
+        }
+    });
+
+    let node;
+    const textNodes = [];
+
+    while ((node = walker.nextNode())) {
+        textNodes.push(node);
+    }
+
+    textNodes.forEach(node => {
+        const parent = node.parentNode;
+        if (!parent) return;
+
+        const originalText = node.nodeValue;
+        if (regex.test(originalText)) {
+            const span = document.createElement('span');
+            span.innerHTML = originalText.replace(regex, '<mark>$1</mark>');
+            parent.replaceChild(span, node);
+        }
+    });
+}
+
+function removeHighlights() {
+    const marks = document.querySelectorAll("mark");
+    marks.forEach(mark => {
+        const text = document.createTextNode(mark.textContent);
+        mark.parentNode.replaceChild(text, mark);
+        mark.parentNode.normalize();
+    });
+}
+
+function searchText() {
+    const input = document.getElementById("search").value.trim().toLowerCase();
+    removeHighlights();  // Clear previous highlights before searching again
+    if (input) {
+        highlightTextInDocument(input);
+    }
+}
+
+// Button click
+document.getElementById("search1").addEventListener("click", searchText);
+
+// Pressing Enter inside input field
+document.getElementById("search").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault(); // Stop form submission
+        searchText();           // Call the search directly
+    }
+});
+</script>
+<div id="a">
+    <p>
+        <h1 style="color: white;background-color: black;text-align: center;font-family: Georgia, 'Times New Roman', Times, serif;">Jayadeva Goswami</h1>
+            Shri Jayadeva Goswami was the court pandit of Shri Lakshman Sena, the 
+King of Bengal. Jayadeva's father was Bhojadev, and his mother's name was 
+Bamadevi. They lived in the Birbhum district of what is now West Bengal in a 
+village called Kenubilva Gram. He was born at the beginning of the twelfth 
+centrury AD. 
+<br>
+<br>
+            Jayadeva Goswami's wife was named Shri Padmavati. When he was the 
+court pandit of Laksman Sen, he lived on the banks of the Ganges. Approximately 
+three hundred years before the appearance of Shri Chaitanya Mahaprabhu, Shri 
+Jayadeva Goswami lived in Bengal. He was the author of Shri Gita Govinda, 
+which is mentioned by  Krishnadas Kaviraja Goswami in the Chaitanya 
+Charitamrita as follows (CC ML 2/11):
+<br>
+<br>
+ "Day and night, in teh company of Svarupa Damodara and Ramananda Raya, Shri Chaitanya Mahaprabhu used to 
+hear with great ecstasy the songs of Vidyapati and Chandidas, as well as a drama 
+composed by Ramananda Raya. He also used to relish hearing the Krishna
+Karnamrita and the Gita-Govinda.  In his introduction, Jayadeva says that the Gita 
+Govinda is a scripture describing the intimate pastimes of Shri Radha and 
+Govinda. It may be worshiped and served by those who are extremely qualified in 
+devotional piety.  For those  who are constantly remembering the rasik pastimes of 
+Shri Hari within his mind, Shri Jayadeva has composed this divine poetic song 
+glorifying the Lord's internal pastimes. He requests the topmost spiritually 
+advanced souls to hear it with gravity and attention. 
+<br>
+<br>
+            There are many many traditional stories regarding the life of Shri 
+Jayadeva.  The following story is generally accepted as authoritative.  One day, 
+Shri Jayadeva Goswami was composing a particulary sensitive section of the Gita
+Govinda, describing Krishna's relationship with the gopis headed by Radharani. 
+He meditated deeply on what he had written and became  concerned that he had 
+perhaps gone too far in describing the exalted character of the gopis. What he had 
+written seemed to represent Krishna's position as being, in a sense, subordinate to 
+that of the gopis.  And yet Krishna is the Supreme Personality of Godhead.  How 
+could he be subordinate to the gopis? He had been inspired to pen a line stating 
+that  Krishna bows down to touch the lotus feet of Shri Radha.  But his hand 
+shrank from the page.  He hesitated thinking,  "How can I commit such an idea to 
+writing? How can I have the audacity to put such a thing it in black and white?"  
+At that time he decided to go bathe in the Ganges, in hopes that perhaps some 
+inspiration would come to him. 
+<br>
+<br>
+            Jayadeva Goswami went off to take his afternoon bath, leaving his wife 
+Padmavati behind to cook the offering for the Deities.  While he was away, 
+Krishna arrived at his house in the dress of Jayadeva. Krishna went over to 
+Jayadeva's writing desk, and there found the sheaves of palm upon which the Gita
+Govinda was written. Krishna picked up Jayadeva's pen and wrote the verse with 
+the line  "dehi padapallava-mudaram," wherein it says "Krishna bows down his 
+head to the lotus feet of Shri Radha." With this Krishna, disguised as Jayadeva, sat 
+down and took the prasadam prepared by Padmavati.  After finishing his 
+prasadam, Krishna stepped outside and vanished.  Just at that time, Jayadeva 
+returned from bathing at the Ganges. When he asked about prasadam, his wife was 
+perplexed. When she told Jayadeva what had just happened, Jayadeva was 
+astonished. He was he went over to his book and saw there in wet ink the verse he 
+had thought of writing before he had gone to bathe in the Ganges: dehi 
+padapallavam udaram: Krishna bows down his head to the lotus feet of Shri 
+Radha.  Upon seeing that verse he said to Padmavati, "It is a miracle! See here: 
+what I told you I was reluctant to write has been written here exactly as I thought 
+of it."  Tears of ecstasy flowed in rivers from his eyes as he understood the 
+mystery of what had just transpired. "Padmavati!" he said, "You are most 
+fortunate.  Krishna Himself has written the line, dehi padapallavam udaram, and 
+accepted prasadam from your own hand."  
+<br>
+<br>       
+            Shrila Bhaktivinoda Thakura has written that although Chandidasa, 
+Vidyapati, Bilvamangala, and Jayadeva lived before Shri Chaitanya Mahaprabhu 
+was externally manifest within this world, Chaitanya Mahaprabhu's conception of 
+bhakti had arisen within their hearts and was expresed in their writings.  Besides 
+the Gita Govinda, Jayadeva Gowsami has written another book called 
+Chandraloka.
+<br>
+<br>
+            The famous Dasa-Avatara-Gita, describing the ten avatars of Vishnu is 
+from Gita-Govinda.  Jayadeva Goswami's disappearance day is on Pausha
+Sankranti. At present, at Jayadeva's birthplace in Kendubiva Gram, there is a 
+festival every year on this day which is known as the Jayadeva Mela;
+<br>
+    </p>
+    <br>
+</div>
+<div id="b">
+    <p>
+       <h1 style="color: white; background-color: black;text-align: center;font-family: Georgia, 'Times New Roman', Times, serif;">Gadadhara Pandit</h1> 
+            From the time that he was a boy, Gadadhara Pandita was always in the 
+association of Sri Caitanya Mahaprabhu. Sri Gadadhara Pandita's father's name 
+was Sri Madhava Misra; his mother's name was Sri Ratnavati Devi . They lived 
+close to the house of Jagannatha Misra in Mayapura. Sri Ratnavati Devi looked 
+upon Sacidevi as if Sacidevi were her big sister. The two of them were always 
+spending time with each other. At the of his childhood pastimes, Gaurahari used to 
+often play with Gadadhara Pandita. They both went to the village school together 
+to study. Gadadhara Pandita was a year younger than Gaurahari. Gadadhara had so 
+much affection for Gaurahari that he could not leave his company even for a 
+moment.  
+<br>
+<br>
+            In the Gaura-ganodesa-dipika it has been explained by Kavi Karnapura that 
+in Vraja-lila Sri Gadadhara Pandita was the daughter of Vrsabhanu—Srimati 
+Radharani.  This is confirmed in the notebooks of Svarupa Damodara as well as in 
+the songs of Sri Vasudeva Ghosa Thakura. According to Sri Caitanya Caritamrta: 
+“No one can describe the characteristics and ecstatic love of Gadadhara Pandita. 
+Therefore another name for Sri Caitanya Mahaprabhu is Gadadhara Prananatha, 
+“the life and soul of Gadadhara Pandita.” No one can say how merciful the Lord is 
+to Gadadhara Pandita, but people know the Lord as Gadaira Gaura, “the Lord 
+Gauranga of Gadadhara Pandita.”
+<br>
+<br>
+            The Caitanya bhagavata records that when Isvara Puri stayed in 
+Nabadwipa Mayapura, he lived at the house of Sri Gopinatha acarya for a few 
+months. At that time, ^svara Puri was very affectionate towards Gadadhara and 
+tutured him from his book Krsna-lilamrta. From his early childhood, Gadadhara 
+Pandita was very serious and self-composed. He was peaceful, renounced, and 
+fond of solitude.  On the other hand, in His childhood, Gaurasundara appeared to 
+be very fickle, unsteady, and whimsical.  When they were studying in school, he 
+would distrub Gadadhara with whimsical questions whose sophistry was meant to 
+baffle Gadadhara. Gadadhara didn't like this as it disturbed his mind and his 
+studies.  As a result he was forced to keep Gaurahari at a distance. But he couldn't 
+bear to keep aloof from the Lord. This posed a great dilemma for Gadadhara 
+Pandita. The Lord said, “Gadadhara! Soon I shall become such a great Vaisnava 
+that even Brahma and Siva will come to me and bow down. 
+<br>
+<br>
+            Sri Gadadhara Pandita was especially affectionate towards Mukunda Datta. 
+Whenever sadhus  or sannyasis would come to Nabadwipa from somewhere, 
+Mukunda Datta would tell Gadadhara and together they would go and visit that 
+holy man.  One time, from Chattagrama, Pundarika Vidyanidhi came to 
+Nabadwipa. At that time, Mukunda Datta intimated to Gadadhara that there was a 
+Vaisnava worth seeing, and suggested they they go visit him. With great jubilation 
+at the prospect of seeing a Vaisnava, Gadadhara Pandita went to visit Pundarika 
+Vidyanidhi with Mukunda Datta. When Gadadhara Pandita came before 
+Pundarika, he saw that he appeared to be a great materialist. His faith was 
+somewhat damaged upon seeing this. He said to himself, “If he is a Vaisnava, why 
+does he appear to be such a materialist?”
+<br>
+<br>
+            Mukunda Datta, knowing the mind of Gadadhara, sweetly sang a verse 
+about Krsna-lila. Mukunda Datta had known Pundarika Vidyanidhi, and by 
+sweetly chanting this verse he awakened his  inner consciousness.  Hearing 
+Mukunda Datta singing this verse about krsna-lila from Srimad-Bhagavatam he 
+began crying “Krsna! Krsna!” and weeping again and again. The Caitanya
+Bhagavata says that the flowing of tears from his eyes was as if the Ganges had 
+descended.  Finally he fell upon the ground, and after rolling back and forth for 
+some time lost consciousness. 
+<br>
+<br>
+            Upon seeing this, Gadadhara Pandita felt great remorse within his mind.  
+He began to reconsider his attitude toward Pundarika Vidyanidhi. He thought, “I 
+thought that this great devotee, this mahabhagavata, was an ordinary sense 
+enjoyer.  I have committed a great offense. If, however, I accept mantra initiation 
+from him I may become free from this offense. I see no other way.”  In this way, 
+Sri Gadadhara Pandita made up his mind to take initiation from Pundarika 
+Vidyanidhi. 
+<br>
+<br>
+            When Pundarika returned to his external consciousness, Mukunda Datta 
+introduced Gadadhara Pandita to him. Hearing from Mukunda Datta about the 
+character of Gadadhara Pandita, Pundarika was delighted. When he heard of 
+Gadadhara's desire to become his disciple he was pleased. He smiled, saying, “I 
+consider myself very fortunate. Only after many many births does one get a 
+disciple like this.” Soon after this, one an auspicious day, Sri Gadadhara Pandita 
+accepted mantra initiation from Pundarika Vidyanidhi. 
+<br>
+<br>
+            After Caitanya Mahaprabhu returned from Gaya-dhama, he began his 
+manifestations of Krsna-prema.  At Gaya, he had performed his pastime of taking 
+shelter of ^svara Puri.  Once he returned home, he began a new life. Day and night 
+he would float in the ocean of Krsna-prema.  Seeing Mahaprabhu's wonderful 
+tears of ecstasy in Krsna-prema, Gadadhara found himself also overwhelmed with 
+ecstasy.  He too cried tears of joy in divine love of Krsna.  From then on 
+Gadadhara Pandita found it difficult to give up the Lord's association even for an 
+hour.  One day, Gadadhara brought Mahaprabhu some tambula.  When he arrived 
+at the house of the Lord, Sri Caitanya Mahaprabhu was deeply absorbed in a mood 
+of separation from Krsna.  Mahaprabhu said, “Gadadhara! Where is 
+Syamasundara?  Where is that Lord of Vrndavana who is dressed in yellow 
+cloth?” Saying this, the Lord began to weep.  Gadadhara was stunned and could 
+not understand what answer to give. With great reverence, he humbly submitted, 
+“Krsna is in your heart.”
+<br>
+<br>
+            Upon hearing this Mahaprabhu began tearing at his chest, but Gadadhara 
+quickly restrained His hands from doing any damage. The Lord said, “Gadadhara! 
+Let go of my hands! If I cannot see Krsna I will not be able to maintain my life.”  
+Gadadhara said, “If you just remain patient, Krsna will surely reveal Himself. He 
+will surely come here before long.” With this Sri Caitanya Mahaprabhu was 
+pacified. Seeing these pastimes of Gaura-Gadadhara from a little distance, 
+Sacimata thought to herself with great satisfaction, “This boy Gadadhara is very 
+intelligent.  I need not fear for Gaurahari's sake.” Sacimata said, “Gadadhara! You 
+must always stay by the side of my son Gaurahari; in this way I shall not have to 
+worry. 
+<br>
+<br>
+            One day in the house of Suklambhara Brahmacari the Lord was to speak 
+something about Krsna. Hearing this, Gadadhara went to the house of 
+Suklambhara Brahmacari and took his seat within the house. Outside on the 
+veranda the Lord began to speak. As the Lord spoke he became overwhelmed with 
+ecstasy and went into a rasik trance. All the devotees surrounding him also began 
+to swim in the waves of prema. In this way for some time everyone tasted prema
+rasa. Gadadhara's prema could not have been more intense. Lowering his head he 
+began loudly weeping again and again with tears of ecstasy.  Hearing Gadadhara's 
+pitiful tears, Mahaprabhu said, “Who is that within the house who is weeping so 
+intensely?“ Suklambhara Brahmacari said, “It is your Gadadhara.” The Lord said, 
+“Gadadhara! You are most fortunate. From your early childhood you have been a 
+determined devotee of Krsna. My own birth was useless. Because of all my sinful 
+karma I could not  attain Krsna.” Saying this the Lord embraced Gadadhara in 
+great ecstatic love.
+<br>
+<br> 
+            When the Lord was performing his Nabadwipa-lila  his chief assistant was 
+Gadadhara.  They who in Vrndavana are Radha-Krsna take the form of Gaura
+Gadadhara in these pastimes in Nabadwipa on the banks of the Ganges.  And those 
+who in Vrndavana are gopas and gopis take part in the pastimes of the Lord in 
+Nabadwipa by performing kirtana. One day the Lord was wandering by the banks 
+of the Ganges when he came upon a small forest grove and sat down. Gradually he 
+became absorbed in remembering the Vrndavana pastimes. Mukunda Datta began 
+sweetly singing songs in the purva-raga. Gadadhara, after gathering flowers in the 
+forest decorated the Lord's neck with a garland. Just as formerly in Vrndavana, Sri 
+Radha used to decorate Lord Krsna, inthe same way Gadadhara decorated the holy 
+form of Lord Gauranga.  Someone sang a sweet song, someone performed a 
+beautiful dance. At length Gauranga sat Gadadhara down on the root of a tree 
+which served as a raised platform. Sri Advaita acarya performed the aroti to the 
+two of them. Sri Nityananda Prabhu was seated on the left of them. Srivasa 
+Pandita Prabhu was taking flowers and decorating them. Narahari was waving the 
+camara. Suklambhara was offering candana. Murari Gupta was singing glories to 
+the Lord. Madhava, Vasudeva, Pursottama, Vijaya, and Mukunda, as well as 
+others sang different songs in various ragas. 
+<br>
+<br>
+            In this way, the Lord finished his Nadiya-lila; he performed his sannyasa
+lila and left his mother and his country and went to live in Jagannatha Puri. At that 
+time Gadadhara Pandita followed Him and also went to Jagnnatha Puri, to live.  
+There Gadadhara Pandita engaged himself in the service of the Sri Gopinatha 
+deity. At that time the Lord would regularly go and visit his dear Gadadhara to 
+float in the waves of rasa  by discussing Krsna. When the Lord made his 
+pilgrimage to Vrndavana, he forbade Gadadhara Pandita to go with Him. At that 
+time, his separation knew no bounds. 
+<br>
+<br>
+            Gadadhara Pandita use to teach a Srimad-Bhagavatam class.  His eternal 
+companion, Sri Gaurasundara used to sit and hear from him. Sri Gadadhara 
+Pandita's discussion of Srimad-Bhagavatam was like an ocean of nectar. After the 
+forty-eight years of the Lord's manifest pastimes were over, He disappeared into 
+the Gopinatha deity of Gadadhara Pandita. This is recorded in Bhakti-ratnakara.
+            Bhaktivinoda Thakura has written:
+            <br>
+ <h6 style="text-align: center;font: bold;">smara gaura gadadhara kelikalam
+    bhava gaura gadadhara paksacaram
+    srnu gaura gadadhara carukatham
+    bhaja godruma-kanana kunjavidhum</h6>
+    <br>
+            Remember the wonderful pastimes of Gaura and Gadadhara. Become a 
+servant of Gaura and Gadadhara. Listen to the beautiful narrations concerning 
+Gaura and Gadadhara, and worship Lord Gaura, the beautiful moon of the groves 
+of Godrum. 
+<br>
+<br>
+            Sri Gadadhara Pandita Goswami's appearance day is on the dark moon day 
+of the month of Vaisakha
+    </p>
+</div>
+<div id="c">
+    <p>
+       <h1 style="color: white; background-color: black;text-align: center;font-family: Georgia, 'Times New Roman', Times, serif;"> Shri Abhirama Gopal Thakura</h1>
+       <br>
+       <br> Shri Abhirama Gopal Thakura  was also known as Shri Rama Das. He was 
+a great devotee of Lord Nityananda.  On the order of Shri Nityananda Prabhu, he 
+became a great acharya and preacher of Gaudiya Vaishnavism.He was a very 
+influential personality, and atheists and blasphemers were very much afraid of 
+him. Empowered by Shri Nityananda Prabhu, he was always in ecstasy and was 
+kind to all fallen souls. It is siad that if he offered obeisances to any stone other 
+than a shalagram-shila, it would immediately burst into pieces. According to 
+Gaura-Ganodesha-Dipika  (12) in Krishna-lila he was Shridama, one of the 12 
+prominent boy cowherd friends of Shri Krishna. He was Nityananda's dearmost 
+devotee. Abhiram Gopal's wife's name was Shri Malini devi. 
+<br>
+<br>
+        Abhirama Gopala Thakura lived in Khanakula Krishnanagara. Khanakula 
+Krishanagar may be visited by taking the narrow gauge train from Howrah Station 
+in Calcutta to Amta. It is located in the present Hooghly District of West Bengal.  
+There, in Khanakula Krishnanagara, near the bankof the Khana river,  is the 
+temple of Abhirama Thakura.  Because it is a town (nagara) with a Krishna 
+temple, the town is called Krishna-nagara, and because the temple is on the kula 
+(banks) of the Khana, it is called Khanakula-krishna nagara Just outside the temple 
+is a bakula tree. This place is known as Siddha-bakula-kunja. It is said that 
+Abhirama Thakura used to like sitting beneath this tree.  
+<br>
+<br>
+        The story of how the Gopinath deity of Khanakula Krishnanagara was 
+established is as follows. One day, the deity of Gopinatha appeared to Abhiram 
+Gopal in a dream, and informed him that he wanted to manifest himself in 
+Khanakula Krishnanagara. It is said that he was buried in the earth, and that in the 
+dream he ordered Abhirama Gopal to excavate him and inaugurate his worship. 
+Abhirama Gopal went to the place where the Lord had indicated he would be 
+found, and began excavation. There, after digging for some time, he found the 
+mind-enchanting deity of Shri Gopinatha.  The place where this discovery was 
+made is now called Rama kunda, and there is a small lake there. The Bhakti 
+Ratnakara says, "After having excavated the Gopinatha deity, all the devotees 
+headed by Rama Dasa (Abhirama Gopala) bathed in the sacred waters of the 
+kunda near the spot where the deity had been found.  From that day on the kunda 
+became famous as Rama Kunda. Whoever bathes there becomes free from 
+repeated birth and death."
+<br>
+<br>
+        One day Shri Abhirama Gopala was overwhelmed with the ecstasy of 
+sakhya rasa, and had a desire to play the flute of a cowherd boy.  Intoxicated by 
+the bliss of Krishna-prema, he began searching the four directions for a suitable 
+flute. As he searched through the forest for a suitable instrument all at once he saw 
+before him a big log. The log was so huge that sixteen men could not move it. 
+Grabbing hold of that log, he turned it into a flute and began to play upon it.  The 
+Chaitanya Charitamrita says, "Rama dasa was one of the principle branches of the 
+Nityananda branch of the Chaitanya tree of bhakti. He was full of sakhya
+prema—love of Krishna saturated with the mellow of friendship. He once picked 
+up a log that sixteen men couldn't lift and used it as a flute."  
+<br>
+<br>
+        Shri Abhirama Thakura had a bullwhip that was imbued with divine 
+power. Its name was "Jayamangal."  Whoever was struck with this whip became 
+filled with Krishna prema.  One day Shrinivasa Acharya went to take darshan of 
+Abhiram Gopala.  At that time, Abhiram Gopal touched him three times with 
+Jayamangal. The Thakur's good wife, Malini, cried out, "My Lord! Do not touch 
+him again. Calm yourself. Shrinivas is only a boy. If you touch him again he will 
+lose consciousness." As a result of coming in contact with the whip of Abhirama 
+Thakura, Shrinivasa Acharya became filled with Shri Krishna prema.
+<br>
+<br>
+        When Shri Chaitanya Mahaprabhu ordered Nityananda Prabhu to preach in 
+Bengal, he sent Abhirama Gopal and Gadadhara Das along with him. Simply upon 
+seeing Abhiram Gopal, atheists and blasphemers would flee in terror. He was a 
+remarkable scholar, well-versed in all the scriptures. He married his wife, Malini, 
+upon the order of Shri Nityananda Prabhu.  His disappearance day is on the 
+seventh day of the dark moon in the month of Chaitra, and on that day a great 
+festival attended by thousands of devotees is held every year in Khanakula
+Krishnanagara. 
+<br>
+    </p>
+</div>
+<div id="d">
+    <p>
+      <h1 style="color: white; background-color: black;text-align: center;font-family: Georgia, 'Times New Roman', Times, serif;"> Ramanujacarya</h1>  
+ 
+ <br>
+ <br>    <h3 style="text-align: center;font: bold;">caitradram sambhavam visnor darsana-sthapanotsukam <br>
+    tundira-mandale sesa-murtim ramanujam bhaje</h3> 
+    <br>
+ “I worship Sripad Ramanuja, the incarnation of Ananta, who took birth in 
+the month of Caitra (April-May) under the sixth lunar mansion in the Tundirades, 
+and who came upon this earth to establish the philosophy of Sri Visnu.”
+<br>
+<br>
+            Four major schools or sampradayas of Vaisnavism are considered 
+authorized by Vaisnavas everywhere: the Brahma, Sri, Rudra, and Kumara 
+Sampradayas. While Gaudiya Vaisnavas follow the disciplic line of Visnu worship 
+originating with Brahma, Sripad Ramanujacarya is the founder-acarya of the Sri 
+Sampradaya, the school of Vaisnavism or Visnu worship descending from the 
+eternal consort of Visnu known as Laksmidevi or Sri.   His commentaries on 
+Vedanta rival those of Sankaracarya, especially in Tamil-speaking South India, 
+where Sri Vaisnavism is prominent to this day. He propounded the Vedantic 
+philosophy known as Visistadvaita-vada, or qualified monism. The most famous 
+among his numerous writings are his commentary on Vedanta (Sri Bhasya), his 
+commentary on Bhagavad-gita, his Vedanta-Sara, and the Vedartha-Sangraha.
+<br> 
+<br>
+            Many biographies of Ramanuja were compiled shortly after his passing, 
+including the  Sanskrit Prappanamrtam of Anantacarya and various Tamil works. 
+These authorized sources provide quite a detailed portrait  of  Ramanuja's life and 
+teachings. Before we consider Ramanuja's importance in the development of  
+Vaisnava philosophy and practice, however, we must first consider the South 
+Indian Vaisnava traditions from which Ramanuja came and which influenced him.
+<br>
+<br>
+ <h3 style="background-color: black; color: white; text-align: center;">THE PREVIOUS ACHARYAS</h3>
+ <br>
+ <h5 style="color: blue; text-align: center;">NATHAMUNI</h5>
+ <br>
+ <br>
+            The first prominent acarya of the Sri Vaisnava school to formulate a 
+systematic theology of devotion was Sri Nathamuni who appeared as the son of a 
+scholarly South Indian brahmana in the year 908 A.D.  Nathamuni was the first 
+important teacher to bring together the teachings of the Vedic Sanskrit texts and 
+the ancient Tamil hymns of the Alwars, (South Indian saints who are famous as 
+incarnations of the divine paraphernalia of Visnu, such as his disc, conch, lotus, 
+wheel, garland and so on).  Nathamuni was responsible for compiling the “Tamil 
+Vedas.”  These were a collection of prayers, devotional songs, and hymns to Visnu 
+written by the Alwars in the Tamil language. These hymns, known as the 
+Prabandha, are sung to this day before the deity of Visnu in the templeat Sri 
+Rangam, the traditional headquarters of the Sri Vaisnavas and the most famous 
+temple in South India.  At the end of his life, Nathamuni was the temple 
+commander at the Sri Rangam temple.
+<br>
+<br>
+
+            Nathamuni's son, Isvaramuni, died at an early age while his wife was still 
+pregnant. Her child, Nathamuni's grandson later became famous as Yamunacarya, 
+the direct  spiritual precursor of Ramanuja himself.  After the death of his own 
+son, Nathamuni took sannyasa. Because of his vast learning, he was given the 
+name “Muni” and because of his development in yogic perfection, he was famous 
+as “Yogindra.” His systematic philosophy of Sri Vaisnavism is formulated in his 
+treatise on logic, nyaya-tattva, and his views on the relationship between bhakti 
+and mystic yoga are given in his book Yoga-rahasya.
+<br>
+<br> 
+<h5 style="color: blue; text-align: center;">YAMUNACARYA</h5>
+<br>
+<br>
+            After Nathamuni, Sri Yamunacarya was the foremost exponent of Sri 
+Vaisnavism before Ramanuja. Born about 953 A.D. in Madura, the capital of the 
+kingdom of Pandura, Yamuna was raised by his mother and grandmother, as his 
+father had passed away and his grandfather, Nathamuni had taken sannyasa. 
+Although he was an orphan, he did well in his studies and soon surpassed all his 
+fellow students in scholarship.  The academic genius of the young Yamuna 
+amazed everyone.  His attention to his studies and proficiency in the scriptures 
+endeared him to his teacher, Sri Bhasyacarya and his sweet and beautiful nature 
+made him the darling of his classmates. 
+<br>
+<br>
+            When Yamuna was only twelve, he won a kingdom through the power of 
+his wits.  At that time, the royal pandita of the Pandya king of Cola had succeeded 
+in making all the other panditas in his country look like fools.  He was famous as 
+“Vidvajjanakolahala” which means “One who throws scholars into an uproar.”  
+The royal pandita was very dear to the king who patronized him lavishly.  
+Vidvajjanakolahala used to extract an annual tax from all the panditas in the land.  
+Those who didn't pay had to face the royal pandita in argument and be humiliated 
+and subsuquently punished.  For fear of losing their reputation as scholars, 
+everyone used to regularly pay this tax without argument. One day a disciple of 
+the royal pandita arrived at the asrama of Yamuna's guru demanding the tax.  
+Yamuna's guru was away at the time and Yamuna himself refused to pay the tax, 
+considering it to be an insult to his gurudeva. He sent the disciple back with the 
+message that an insignificant follower of Bhasyacarya would challenge the world
+conquering royal pandita,  Vidvajjanakolahala in open debate. 
+<br>
+<br>
+            When the news of the twelve-year old boy's challenge came to the royal 
+pandita, he simply laughed.  “All right,”  he said.  “Summon this scholar here and 
+let us match wits.”  By the king's own order a day was set for the debate, and at the 
+appointed time the boy scholar was brought before the royal court on a lavish 
+palanquin.  Seeing the boy's beauty, the queen was charmed. She instantly took his 
+side, while the king favored his own pandita. A wager was settled on by the king 
+and queen. If the king's pandita won the debate, the queen was to submit to the 
+king's every whim.  If the queen's favorite, the beautiful boy pandita, won the 
+debate, the king was to award Yamunacarya half the kingdom. 
+<br>
+<br>
+            First the royal pandita examined the child, asking him many obscure 
+questions about Sanskrit grammar which Yamuna answered perfectly.  Then it was 
+Yamuna's turn to examine the scholar. 
+<br>
+ He said, “I will state three maxims.  If you 
+can refute them, I shall admit defeat.  
+<br>
+The first is this: your mother is not barren.” 
+            The royal pandita was dumbfounded.  To refute this maxim would be do 
+deny his own birth. Unable to answer, he stood silent.
+            Yamunacarya continued: “My second proposal is this: The king is 
+righteous.  Refute this  if you dare.”
+            Again the pandita was silenced.  How could he argue that his own king 
+was impious?
+            Finally the boy said: “My third proposal is this: The queen is chaste. 
+Refute this and I am defeated.”
+<br>
+<br>
+            Unable to refute these propositions, the pandita fought back.  “You are 
+proposing things which are irrefutable. By asking me to challenge the piety of the 
+king and the chastity of the queen you are committing treason and blasphemy.  
+How dare you ask this of me!  This is an outrage. If you think these propositions 
+can be refuted then refute them yourself and be damned as an offender to the 
+throne.  Otherwise admit your insolence and hang your head in shame.”
+<br>
+<br>
+            The panditas followers filled the arena with applause, and the king felt 
+confident that his champion had successfully turned back the challenge of this 
+impudent boy. But Yamunacarya was not  finished. “As you wish,” he said.  “I 
+shall refute these propositions myself. First I asked to to refute the proposal that 
+your mother is not barren. Since you have failed to do so, I must cite the Manu 
+Smrti on this matter. According to the Laws of Manu, “If a woman has no more 
+than one child, she may be considered barren.” (eka-putro hy aputrena lokavadat, 
+Manu-Samhita, 9.61, Medhatithi Bhashya). Since your mother had only one son, 
+the proposal that she is not barren is refuted. 
+<br>
+<br>
+            “Now the second proposal: the king is pious.  I asked you to refute this, but 
+you were unable to do so. The Laws of Manu also state that since he is responsible 
+for their protection, the king assumes one sixth of the results  of the pious or 
+impious deeds of his subjects. (sarvato dharmasad bhago rajo bhavati raksatah, 
+adharmadapi sad bhago bhavatyasya hyaraksatah, Manu-Samhita, 8.304, 
+Medhatithi Bhashya) Since this is Kali-yuga, the people in general are naturally 
+impious, and so the king must assume a heavy burden of impiety. This refutes the 
+second thesis: the king is pious.
+<br>
+<br>
+            “As for my refutation to the third proposal—the queen is chaste.”  With 
+this the crowd became quiet.  The queen herself blushed.  Yamunacarya's 
+supporters wondered, how the boy could refute this proposition and conquer the 
+pandita without embarrassing the queen.  Yamunacarya continued, “The Laws of 
+Manu state that a great king is the representative of the gods.  The gods—Agni the 
+fire-god, Vayu the wind-god, Surya the sung-god, Chandra the moon-god, Yama 
+the lord of death, Varuna, Kuvera, and Indra—are all present in the body of the 
+king.  The queen, therefore is wedded to more than just one man.  When a woman 
+is married to more than one man how then can she be chaste? Thus the third 
+proposition is refuted.”
+<br>
+<br>
+            The crowd was astonished.  The boy scholar had certainly defeated the 
+royal pandita. The queen was jubilant and embraced Yamunacarya, saying, 
+“Alabandaru,” meaning “one who conquers.” The court pandita was disgraced. 
+The king, who had been defeated in his wager with the queen, arose and said, “My 
+boy, Alabandaru, child-scholar that you are you have defeated my royal pandita, 
+the terror of scholars—Vidvajjanakolahola himself.  His pitiful life is now yours to 
+do with as you see fit. I commend him into your hands.  As for yourself, I 
+promised the queen to give you half my kingdom upon your victory here.  Now 
+that you have won, I humbly request you to accept half my kingdom as your 
+reward.”  The king awarded to Yamunacarya the place which is now called 
+alavandara-medu. 
+<br>
+<br>
+            Yamunacarya, who had won the title of “conqueror” now became famous 
+as Alabandaru, the boy-king.  As the years passed, he became involved  more and 
+more in the affairs of state, practically forgetting the legacy of his grandfather, 
+Nathamuni.  Surrounded by kingly opulence and royal power, he gradually 
+became entrenched in the position of a king. Absorbed in politics, he had little 
+time for spiritual affairs. 
+<br>
+<br>
+            About this time, Alabandaru's grandfather, Nathamuni, had passed away, 
+but before he left this world, he called his most confidential disciple Nambi to his 
+side and entrusted him with a sacred task: to inspire Yamunacarya to renounce his 
+kingdom and champion the cause of Sri Vaisnavism.  Yamunacarya was uniquely 
+qualified to propogate Sri Vaisnavism.  No one else could take the place of 
+Nathamuni. 
+<br>
+<br>
+            Years passed. Finally the time came to spur Yamunacarya to action. 
+Nambi, remembering the order of his gurudeva set out to confront Yamunacarya 
+and convince him of the need to renounce the world and preach. When he arrived 
+at the palace gates, however, he was turned away.  It was not easy for a humble 
+mendicant to get an interview with the great King Alabandaru. Through inquiry, 
+Nambi came to know who the royal cook was.  One day, while the cook was 
+returning from the marketplace with fresh produce, Nambi stopped him and gave 
+him some vegetable greens called tuduvalai, which are supposed to promote 
+mental purity and increase one's tendency towards contemplation and spiritual life. 
+He asked to cook to please prepare these greens regularly for the welfare of the 
+king.  The pious cook understood the rarity and purity of these greens and was 
+pleased to cook them for the king.  From that day on, he began regularly preparing 
+them for the king's lunch. The king very much enjoyed the greens, and Nambi 
+would regularly supply the cook with them. 
+<br>
+<br>
+            One day, Nambi held back. The king missed his greens and asked the cook 
+why they had not been prepared.  When the cook explained about the mysterious 
+mendicant who supplied these greens, the king's interest was piqued. “The next 
+time this sadhu comes,” the king ordered his royal cook, “bring him before me.” 
+<br>
+<br>
+            The next day, when Nambi returned with the greens, the cook brought him 
+before the king and introduced him. “What do you want of me?” the king asked.  
+“Why do you bring these greens every day for no payment?” Nambi requested a 
+private audience.  The king ordered all his attendants to leave them alone, and 
+when everyone had gone he offered Nambi a seat. “Please speak,” he said.
+<br>
+            Nambi then told Alabandaru of his grandfather's passing. He told him of 
+Sri Nathamuni's anxiety that the sampradaya of Sri Vaisnavism needed a 
+champion, a great scholar who could defeat opposing schools of philosophy and 
+establish the religious principles of their tradition.  Only Yamunacarya was 
+qualified enough to do this, but he had now become King Alabandaru, a ruler of 
+men attached to royal luxury and power.  Gradually Nambi awoke in 
+Yamunacarya's heart a desire to renounce the throne and lead the Sri Sampradaya. 
+After deeply considering the message of Bhagavad-gita in Nambi's company he 
+visited the temple of Sri Rangam, where he accepted the mantra from Nambi and 
+committed himself to giving up the opulence of royalty and taking up the mission 
+of his grandfather. 
+<br>
+<br>
+            After surrendering himself fully to a life of spiritual discipline, 
+contemplation and devotion, Sri Yamunacarya went on to become a great teacher.  
+He quickly became the intellectual and spiritual leader of the Sri Vaisnavas, highly 
+regarded for his realization, his scholarship, and his synthesis of Nathamuni's 
+system of philosophy with the system of Pancaratra worship ordained by the 
+Vedas. Yamunacarya's unquestioned status as a brahmana helped him to establish 
+his Pancaratrik version of Vedanta above the protests of the followers of 
+Sankaracarya.  Thus he increased the prestige of Vaisnavism and Krsna-bhakti by 
+demonstrating  both its scriptural basis and its spiritual superiority to mundane 
+casteism.  Among his writings are the famous devotional prayers to Visnu known 
+as the Stotra-ratnam, the Jewel of Prayers.  His writings  also include various 
+philosophical and theological works: the Gita-sangraha, an explanation of his 
+views on Bhagavad-gita; his Agama-pramanya, expounding the synthesis of the 
+Pancaratra tradition with his version of Vaisnava Vedanta; and other important 
+doctrinal works, such as the Siddhitraya or Threefold Perfection (of which only 
+fragments survived him) and the Atma-siddhi, or Treatise on Self-realization.
+<br>
+<br>
+            Yamunacarya's principle writings are in Sanskrit.  Writing in Sanskrit  was 
+for Yamunacarya somewhat of a strategic departure from the tradition of the South 
+Indian Alwars, who wrote in Tamil.  By writing his scriptural commentaries in 
+Sanskrit, however, Yamunacarya hoped to establish the South Indian tradition  
+within a more classic framework of exposition acceptable to a wider range of 
+Vedic scholars.  In this way, he laid the groundwork for Ramanuja to establish Sri 
+Vaisnavism as an orthodox sampradaya, or major school of theology. 
+<br>
+<br>
+            The general outline of Sri Vaisnavism, as well as many of its details were 
+chalked out by Yamunacarya in his writings.  It remained for Ramanuja to fill in 
+that outline, to etch out its  finer details, to establish a more orthodox Sri 
+Vaisnavism in the collective consciousness of South India, and to build a place in 
+history for the Sri Vaisnava sampradaya.  
+<br>
+<br>
+            Yamunacarya attracted many followers and disciples; history records the 
+names of only twenty of them.  Although they were sincere and devoted to their 
+beloved gurudeva, none of them were blessed with the deep scholarship or 
+determined energy required to carry on his great work in a significant way.  It was 
+left to Sri Ramanujacarya to fulfill Yamunacarya's hopes for the future of Sri 
+Vaisnavism. 
+<br>
+<br>
+            Periya Tirumalai Nambi, who is also called Sri Saila Purna in some 
+accounts, was Yamunacarya's favorite follower. Under the guidance of 
+Yamunacarya, he accepted the renounced order of life and lived with his guru, 
+serving him to the very end. Nambi had two sisters, named Bhudevi and Sridevi, 
+after the two consorts of Lord Sri Venkatesvara. Bhudevi married a pious 
+brahmana named Asuri Kesavacarya. Kesavacarya lived in Sri Perumudura, about 
+twenty-six miles from Madras. After some time, a child was born to them. He was 
+named Laksmana by Nambi, after Laksmana, the brother of Sri Ramacandra. 
+According to Sri Vaisnavas, Ramanuja was an incarnation of Laksmana himself.  
+Since Laksman had been a great devotee of Rama the boy soon became known as 
+Rama-anuja, or “follower of Rama.” 
+<br>
+<br>
+            According to Sri Vaisnava tradition, Ramanuja was born on the fifth day of 
+the full moon in the month of Caitra in 1017 A.D. Ramanuja's family belonged to 
+the caste of Vadama smarta-brahmanas, who were formal Vedic scholars.  
+Ramanuja's father Kesavacarya was very much attached to the performance of 
+Vedic sacrifices or yajnas. For this reason he became famous as Sarvakratu or the 
+performer of all kinds of sacrifices.  When the boy came of age, Kesavacarya 
+immersed him in Sanskrit education, teaching him grammar, logic, and the Vedas. 
+Although Ramanuja was well-schooled in brahminical learning, however, he had 
+not yet been exposed to the deeply devotional Tamil hymns glorifying Sri Visnu.  
+Still, his natural devotion had already been awakened by association with a non
+brahmana disciple of Sri Yamunacarya named Kancipurna, and Ramanuja 
+demonstrated a saintly nature even from his early childhood.  As time passed he 
+underwent all the purificatory rites of a pious Hindu, including the sacred thread 
+ceremony and was married, at the age of sixteen.  
+<br>
+<br>  
+            Only a month after the wedding, Ramanuja's father became gravely ill and 
+passed away.  After the passing of his father, Ramanuja moved along with his 
+family to Kancipuram, where he entered the academy of Yadava Prakasa, a 
+Vedantist of the impersonalist Sankarite school.  According to some 
+commentators, the decision to enroll Ramanuja in the school of a non-Vaisnava is 
+evidence that his family was not strictly devoted to Visnu but were merely caste 
+brahmanas interested in insuring that their son would become a good scholar.  
+Others are convinced that this was merely Ramanuja's strategy  to become well
+versed in the arguments of Sankaracarya before thoroughly refuting them in his 
+own commentaries.
+<br>
+<br>
+            Ramanuja soon excelled among the students of Yadava Prakasa and 
+become his teacher's  favorite student.  Yadava Prakasa preached the theory of 
+nondualism, and stressed the illusion of all form, including the form of Sri Visnu.  
+As Ramanuja's devotion to Visnu blossomed, his disgust with this philosophy 
+grew. Still, out of respect for his teacher he avoided conflict. 
+<br>
+<br>
+            Soon, however, the day arrived when he could no longer tolerate the 
+impersonalism of Yadava Prakasa. One day Ramanuja was massaging his guru's 
+back as Yadava Prakasa explained a verse from the Candogya Upanisad.  The 
+verse contained the words kapyasam pundarikam evam aksini.  Following the 
+interpretation of Sankaracarya, Yadava Prakasa explained that kapy means 
+“monkey”  and asanam means “ass.” The verse therefore, as interpreted by Yadava 
+Prakasa was translated to mean, “Lord Visnu's lotus eyes are as red as a monkey's 
+ass.”
+<br>
+<br>
+            Ramanuja was enraged at this blasphemy, and the hot tears flowed which 
+from his eyes in anguish fell upon his guru's back. Yadava Prakasa could 
+understand that his disciple was disturbed, and inquired as to what the problem 
+was. When Ramanuja took issue with his guru's interpretation, Yadava Prakasa 
+was astonished. He demanded Ramanuja's interpretation.  Ramanauja explained 
+that kapyasam means “that which sits upon the water and flourishes by 
+drinking,”—in other words, a lotus.  So the meaning of the verse is that the lotus 
+eyes of Visnu are as beautiful as the red lotus which blossoms in the water.”
+<br>
+<br>
+            When Yadava Prakasa saw his disciple's expertise in defeating his 
+argument, he knew that he had a powerful rival in his midst.  From that day on, he 
+began plotting Ramanuja's murder.  He conspired with his disciples to go on 
+pilgrimage to the Ganges and kill Ramanuja in a secluded place.  After killing 
+Ramanuja, they would bathe in the Ganges to expiate the sin.  Fortunately, 
+Ramanuja's cousin learned of the murder plot and warned Ramanuja, who 
+managed to escape unharmed. After some time Yadava Prakasa returned to 
+Kancipurnam, and Ramanuja continued going to his lectures, although inwardly 
+he was looking for another path. 
+<br>
+<br>
+            At Yamunacarya himself went to vist Ramanuja, but when he came to 
+Kanci he saw that Ramanuja was still a follower of Yadava Prakasa and so 
+Yamunacarya did not approach him.  It is said that Yamunacarya watched him 
+from a distance and prayed for Ramanuja to become the darsana-pravartaka, or 
+philosophical preceptor of the Sri Vaisnava Sampradaya. 
+<br>
+<br>
+            About this time, the king of Kancipuram called for Yadava Prakasa.  His 
+daughter was possessed by a brahma-raksasa, a brahmana ghost.  Yadava Prakasa 
+was called as an exorcist, and when he arrived with his disciples, he was brought 
+before the king's daughter and asked to relieve her of the influence of the ghost.  
+Speaking through the girl's mouth, the ghost insulted Yadava Prakasa and laughed 
+at him. Ramanuja was asked to try, and when he came before the girl, the 
+brahmana ghost said, “If Ramanuja blesses me with the dust of his lotus feet, I 
+shall leave this girl.” Ramanuja did so upon which the girl was cured, and the king 
+was deeply indebted to him.  
+<br>
+<br>
+            After this humiliation before Ramanuja, it was not long before Yadava 
+Prakasa told Ramanuja to leave his  asrama. The final split between them came 
+when Yadava Prakasa was discussing the meaning of two Upanisadic texts: 
+saravam khalv idam brahma (Candogya Upanisad 3.1, “everything is Brahman”) 
+and neha nanasti kincana (Katha Upanisad 4.11, “there is no distintion”).  Yadava 
+Prakasa discussed these verses at length while explaining the theory of oneness 
+promoted by Sankaracarya with great eloquence.  After Yadava Prakasa was 
+finished speaking, Ramanuja gave his own interpretation.
+<br>
+<br>
+              Ramanuja explained that sarvam khalv idam brahman would mean “the 
+whole universe is Brahman, if it were not for the word tajjalan in the next part of 
+the verse, which qualifies the meaning.  Ramanujacarya held that the means not 
+that the universe is Brahman, but that it is pervaded by Brahman. From Brahman 
+the universe  comes, by Brahman it is sustained, and into Brahman it ultimately 
+enters, just as a fish is born in water, lives in water, and is ultimately dissolved 
+into water.  Still a fish is not water, but a separate entity entirely.  In the same way  
+the universe, although existing within Brahman is different from Brahman. Just as 
+a fish can never be water, so the universe can never be Brahman.  As to the second 
+verse, neha nanasti kincana, according to Ramanuja it does not mean “No 
+distinction exists,” but rather that things are not distinct in that they are are all 
+interconnected, just as pearls are strung on a thread.  Since all things are inter
+related and inter-connected, in a certain sense it may be said that there is no 
+distinction to be made between them.  All things are related to Brahman and as 
+such do not have any existence which is distinct from Brahman.  Still, while a 
+certain unity can be seen in the inter-relatedness of all things, everything within 
+the universe has its own distinct reality. Pearls strung on a thread have unity; 
+collectively they form an organic whole, a necklace.  Still, each individual pearl 
+has its own unique qualities.  While spirit, matter, and God may be seen as one 
+organic whole, still all of them have their unique qualities.  Therefore, Ramanuja 
+argued,  the principle of absolute oneness as argued by Sankaracarya cannot stand; 
+rather the principle of unity characterized by different qualities must be accepted.
+<br>
+<br>
+            After leaving Yadava Prakasa, Ramanuja was advised by his mother to 
+take guidance from Kancipurna, the non-brahmana Vaisnava whose devotion 
+Ramanuja greatly revered. Kancipurna advised him to serve the Visnu diety in the 
+temple of Lord Varada by carrying water every day to the temple.  He began 
+serving Kancipurna with great devotion, and soon was accepted as his disciple.  
+Although Kancipurna was by birth a member of the sudra caste and  
+Ramanujacarya was a brahmana, this never influenced  Ramanujacarya's devotion 
+for him.  He accepted Kancipurna as his guru without reservation.   
+Ramanujacarya's wife, however, could not tolerate her husband's acceptance of a 
+sudra as a guru, and did her best to discourage  Ramanujacarya from remaining in 
+his company.
+<br>
+<br>
+            Yamunacarya by this time was very old.  Wracked by illness, he was on 
+the verge of passing from this world when he heard that  Ramanujacarya had left 
+the school of Yadava Prakasa and had begun serving the humble Kancipurna, who 
+was famous as a great devotee of Visnu. He sent some disciples to bring  
+Ramanujacarya.  When  Ramanujacarya heard the news, he immediately set out 
+for Sri Rangam, the headquarters of the Sri Vaisnavas, where Yamunacarya lay 
+dying.  But by the time he arrived at the side of Yamunacarya it was too late.  The 
+master had passed from this world, entering Vaikuntha and the eternal service of 
+Sri Visnu. 
+<br>
+<br>
+            At that time,  Ramanujacarya noticed that three fingers on the right hand of 
+the master were closed.  He asked the disciples of Yamunacarya if he had been 
+accustomed to hold his hand in such a way, and they replied that it was highly 
+unusual.  Sripad Ramanuja could understand that this unusual gesture of the three 
+clenched fingers represented the three unfulfilled wishes of Yamunacarya. He then 
+vowed to fulfill these three wishes.  He promised to teach the people in general the 
+religion of surrender to Visnu, training them in the five samskaras, or purificatory 
+processes. As he did so, one of Yamunacarya's fingers relaxed.   Ramanujacarya 
+then vowed to comment on the hymns of the Alvars, the South Indian saints, and 
+with this the second finger relaxed.  Finally Ramanujacarya promised to write a 
+scholarly commentary on the Vedanta-sutras expounding the principles of Sri 
+Vaisnavism as the ultimate truth of the Vedas. With this the last clenched finger 
+was relaxed.  A look of spiritual peace came over the lotus face of  
+Ramanujacarya's divine master, Sri Yamunacarya, as if to say that he could now 
+depart peacefully, knowing that his mission was in good hands. 
+<br>
+<br>
+            Upon his return to Kancipurna,  Ramanujacarya gradually became 
+completely disinterested in his family life, his beautiful wife and home, and 
+absorbed himself deeply in the service of his guru Kancipurna with whom he 
+began spending most of his time.  As  Ramanujacarya spent more time at the 
+temple, his wife became unhappy that her husband was ignoring her.  She was 
+further humiliated by the fact that he was neglecting her to serve a low-born sudra. 
+<br>
+<br>
+            One day,  Ramanujacarya invited Kancipurna for dinner, thinking that by 
+so doing he would be able to take the remnants of his guru's  prasada, and so 
+become blessed. Kancipurna, being very humble arived early, before Ramanuja 
+returned home.  Kanipurna explained to Ramanuja's wife Kambalaksa that he had  
+service to do in the temple and could not stay for long.  With this, Kambalaksa 
+quickly fed him and sent him away.  After Kancipurna had left, she took a long 
+stick and carefully picked up the banana leaf upon which he had dined, so as not to 
+soil her hands with what she thought to be the contaminated remnants of an 
+untouchable.  After ordering her maidservant to clean the room carefully, she 
+bathed in order to purify herself. When Ramanuja returned and heard of the insult 
+to his guru, he was enraged.
+<br>
+<br>
+            One day, while drawing water from a well,  Ramanujacarya's wife met the 
+wife of his guru, Kancipurna. When the water from their waterpots accidentally 
+became mixed,  Ramanujacarya's wife cursed Kancipurna's wife, thinking that her 
+waterpot had become contaminated by the water of an outcaste. Whend 
+Ramanujacarya came to know of this insult, he was furious.  He sent his wife 
+home to her parents and left to take sannyasa.
+<br>
+<br>
+            After leaving home, he went to the temple of Varadraja to see the beloved 
+deity of Visnu whome he had served for so long. After obtaining saffron cloth and 
+all the necessary paraphernalia of the renounced order, he accepted the triple staff, 
+(tridanda) of the Vaisnava sannyasi, symbolizing the complete surrender of mind, 
+body, and words to Visnu.  With this, he became known as Yatiraja, “the king of 
+the renounced order.”
+<br>
+<br>
+            Soon after taking sannyasa,  Ramanujacarya established his own monastery 
+or asrama, where he began training disciples in his systematic Vaisnava 
+interpretation of Vedanta as well as  in the path of devotion to Visnu. His asrama 
+was established near the temple in Kanci. His first disciple was his older sister's 
+son, his nephew Mudali andan, also known as Dasarathi.  His second disciple was 
+a learned and wealthy brahmana named Kurattalvan, also known as Kuresa, who 
+was renowned for his photographic memory. 
+<br>
+<br>
+            One day the mother of Yadava Prakasa saw  Ramanujacarya teaching his 
+disciples and was impressed by his saintly qualities.  She was a great devotee of 
+Visnu and was somewhat unhappy that her son, Yadava Prakasa had become a 
+follower of Sankaracarya's impersonal monism. She encouraged Yadava Prakasa 
+to visit  Ramanujacarya.  That night Yadava Prakasa had a dream in which a 
+divine voice instructed him to become  Ramanujacarya's disciple. The next day,  
+upon visiting  Ramanujacarya, Yadava Prakasa found him wearing the dress of a 
+Vaisnava.  He asked him, “Why have you rejected the school of Sankaracarya? 
+Why have you adopted this Vaisnava dress? Where is this sanctioned in the 
+scriptures? Can you show any scriptural evidence supporting your behavior?”
+            With this,  Ramanujacarya instructed his foremost disciple, Kuresa, to 
+enlighten Yadava Prakasa with the scriptural evidence in support of Vaisnava 
+dress. He quoted extensively from the Sruti, saying, “Sruti is the best evidence. 
+Therefore I shall cite some references from the Sruti.
+            In the Sruti it is said:
+ <br>
+            <h3 style="text-align: center;font: bold;">sa te visnorabja-cakre pavitre <br>
+                janmambodhim tartave carnaninra <br>
+                mule bahvordadhate'nye purana <br>
+                linganyamge tavakanyarpayanti</h3>
+                <br>
+            “To free themselves from the ocean of repeated birth and death, the best of 
+men decorate their bodies with the symbols of the lotus and cakra of Visnu. 
+<br>
+<br>
+ <h3 style="text-align: center;font: bold;" >aibhirbayamurukramasya cihnai rahnkita loke subhaga bhavamah <br>
+    tad visno paramam padam ye'dhigaccanti lacchata </h3>
+    <br>
+            “Just as those who go to the holy abode of Visnu are decorated with the 
+conch, lotus, disc, and club, so shall we also wear these marks and thus attain that 
+divine abode.
+<br>
+<br>
+ <h3 style="text-align: center; font: bold;">upavit-adi-baddharyah sanka-cakradayas tatha <br>
+    brahmanasya visesena vaisnavasya visesatah</h3>
+    <br>
+            “Brahmanas should not only wear the sacred thread, but they should also 
+decorate their bodies with the conch, lotus, cakra, and club of Visnu,thus 
+identifying themselves as  Vaisnavas.
+<br>
+<h3 style="text-align: center;font: bold;">hare padakrtim atmano hitaya madhye cchidram-urdhva-purndram
+    yo dharayati sa parasya priyo bhavati sa punyavan bhavati sa muktiman bhavati</h3> 
+    <br>
+
+            “One who decorates himself with the tilaka markings resembling the lotus 
+feet of Visnu with a space in the middle becomes dear to the Paramatma, becomes 
+pious,  and attains liberation.”
+<br>
+            After hearing Kuresa expound so perfectly the scriptural evidence for 
+adopting the dress of a Vaisnava, Yadava Prakasa asked him, “Why do you say 
+that Brahman has qualities ?  This view (visistadvaita-vada) is not supported by 
+Sankaracarya.  Where is the scriptural evidence for your position?
+<br>
+            Agin Kuresa replied, citing the Sruti:
+ <h3 style="text-align: center;font: bold;">yah sarvajnah sarvavit</h3> 
+ <br>
+            “[The qualities of the Supreme Absolute Truth are that] He is all-wise and 
+omniscient.’
+<br>
+ His qualities are further described in the Upanisads as follows:
+ <h3 style="text-align: center; font: bold;">na tasya karyam karanans ca vidyate <br>
+    na tat samas cabhyadhikas ca drsyateæ <br>
+    parasya saktir-vividhaive-sruyate <br>
+    svabhaviki jnana-bala-kriya ca</h3>
+    <br>
+            “He does not possess bodily form like that of an ordinary living entity: He 
+has a transcendental form of bliss and knowledge, and thus there is no difference 
+between His body and His soul.  All His senses are transcendentally divine. He is 
+absolute substance. Any one of His senses can perform the action of any other 
+sense. Nothing is greater than Him or equal to Him. His potencies are 
+multifarious, and thus His deeds are automatically performed as a natural 
+consequence of His divine will. In other words , whatever He wills immediately 
+becomes reality.  His divine energies are threefold: His knowledge (jnana-sakti) 
+energy (also known as cit-sakti or samvit-sakti), His strength energy (bala-sakti, 
+also known as the Lord's existence energy, sat, or sandhini-sakti), and his pastime 
+(kriya-sakti) energy (also known as his ecstasy energy, ananda or hladini-sakti)."
+<br>
+
+ <h3 style="text-align: center; font: bold;">harih parayanam param harih parayanam param <br>
+    punah punarvadamyaham harih parayanam param</h3>
+    <br>
+            “The Supreme Personality of Godhead is Sri Hari.  He alone is the ultimate 
+shelter, the supreme refuge, the final resting place. Again and again I proclaim this 
+fact: Sri Hari is the Supreme Personality of Godhead."
+<br>
+<br>
+            In this way, Kuresa went on and on, citing one scriptural evidence after the 
+next to establish the principles of Sri Vaisnavism. Yadava Prakasa was astounded 
+at the profound scholarship of this disciple of  Ramanujacarya.  Remembering his 
+mother's advice to take shelter of Ramanuja, remembering the divine voice in the 
+dream that told him to surrender to  Ramanuja, and remembering all the offenses 
+he had committed at the holy feet of that great saint, Yadava Prakasa could contain 
+himself no longer.  He fell at the feet of  Ramanujacarya and prayed for his 
+blessings. He submitted himself as a disciple of Ramanuja, who immediately 
+accepted him, giving him the name Govinda Jiyar.
+<br>
+<br>
+            Yadava Prakasa later became a famous disciple of  Ramanujacarya.  He 
+freed himself from his attachment to the impersonal monism of Sankaracarya. 
+After taking sannyasa, he used his great powers of scholarship to promote the 
+cause of  Ramanujacarya and Sri Vaisnavism. He was no longer a proud scholar; 
+now he was a humble devotee. In his final years,  he was ordered by Ramanuja to 
+write a book on the proper religious conduct to be followed by Vaisnava sannyasis 
+of the Sri Vaisnava line.  This book is called Yati-dharma-sammuccaya, and is still 
+studied and followed by the sannyasis of  the Sri sampradaya.
+<br>
+<br>
+            As Ramanuja's fame spread, the disciples of Yamunacarya in Sri Rangam 
+begged Ramanuja to come and lead them.  Finally, after taking permission from 
+his beloved deity Lord Varada, Ramanuja left Kancipuram for Sri Rangam, to 
+begin his new life.
+<br>
+<br>
+            After arriving in Sri Rangam,  Ramanujacarya immersed himself in 
+studying the scriptures under the guidance of Mahapurna, a prominent disciple of 
+Yamunacarya. With the help of Mahapurna,  Ramanujacarya became expert in 
+many scriptures, including the Nyasatattva, the Gitartha-sangraha, the Siddhitraya, 
+the Brahma-Sutra, and the Pancaratras. After some time Mahapurna advised  
+Ramanujacarya to go to the great Goshtipurna and accept initiation in the 
+Vaisnava mantra from him. 
+<br>
+<br>
+            At the behest of Mahapurna, Ramanuja approached Goshtipurna for the 
+mantra, but was refused, for Goshtipurna was reluctant to give such a confidential 
+mantra to a relative newcomer.   Ramanujacarya approached Goshtipurna 18 times 
+with great humility, finally breaking into tears and pleading for his mercy.  At last 
+Goshtipurna gave him the mantra, after first swearing him to absolute secrecy.  
+When Ramanuja had vowed never to repeat the mantra to anyone else, 
+Goshtipurna whispered the mantra in his ear saying, “This mantra is most 
+powerful. Whoever chants it will attain liberation; he will return to the spiritual 
+Vaikuntha planets where he will achieve the personal service of the Lord.”
+<br>
+<br>
+            As he left the temple and proceeded towards Sri Rangam, a crowd gathered 
+around  Ramanujacarya. They had heard that he was to receive the mantra from 
+Goshtipurna, and begged to know its secret. Inspired to distribute the magic of the 
+mantra that could free anyone who chants it from material existence, Ramanuja 
+announced to the crowd: “Please chant this mantra: Om namo narayanaya.”
+<br>
+<br>
+            The crowd was overjoyed, and felt that they had been truly blessed, but 
+when the news reached Goshtipurna, he called for Ramanuja.  Outraged that his 
+new disciple would disobey his order so quickly, he demanded an explanation.  “I 
+told you to keep this mantra a secret.  Why have you so quickly revealed it to the 
+masses? Do you know the penalty for such behavior?” 
+<br>
+<br>
+            Ramanuja replied, “Yes, gurudeva,  I may go to hell for disobeying your 
+order.“
+<br>
+            “Then why have you done such a thing?”
+            <br>
+            “ My beloved teacher,  I realized that the power of the mantra given by you 
+could deliver everyone who hears it.  When I saw the earnest desire of these 
+people to be saved from material life, I could not contain myself.  I felt some 
+divine inspiration to distribute your mercy to all of them.  If this is a great sin, then 
+I must be punished by your holiness. Condemn me to hell, then, if my sin warrants 
+it. But please do not show your wrath to these simple people who begged me for 
+the mantra.”
+<br>
+<br>
+            When Goshtipurna saw the earnest sincerity of his disciple, his heart was 
+moved.  After all, what greater principle can there be than the distribution of the 
+Lord's mercy. Although Ramanuja had disobeyed the letter of his instructions 
+about the mantra,  he had understood the real spirit of the mantra itself.  He would 
+make a great preacher of the Sri sampradaya, and had shown that he had the 
+capacity to instill devotion in the hearts of the people in general.  How could he 
+then be condemned? 
+<br>
+<br>
+            Goshtipurna fell at Ramanuja's feet, saying, “Forgive me, my child.  It is 
+you who are my master, and I the disciple. Who am I to take the role of your guru? 
+How could I know your greatness? Accept me as your disciple.”
+<br>
+<br>
+            After this incident,  Ramanujacarya's reputation spread far and wide.  He 
+was regarded as an incarnation of Laksmana himself. He began training more and 
+more disciples, and his camp grew.  He engaged many scholars in debate and 
+defeated them by propounded his sytematic view of Vedanta, known as 
+Visistadvaita-vada, or qualified monism.  One such scholar was Yajnamurti.
+<br>
+<br>
+            Yajnamurti was a famous pandita who had defeated many scholars in 
+argument and had written many commentaries on the scriptures. He challenged 
+Ramanuja to a debate saying that if he lost, he would carry Ramanuja's shoes and 
+become his disicple. Ramanuja, for his part, declared that if he was defeated, he 
+would give up books and arguments forever. The debate began and went on for 17 
+days.  Ramanuja was discouraged.  He prayed fervently to Lord Varada, his 
+beloved Deity, for help.  That night he had a dream in which the Deity assured him 
+of victory, advising him to follow the line of reasoning given by Yamunacarya.  
+Uplifted by his divine vision, Ramanuja appeared in the arena of debate with 
+renewed confidence.  Before the debate began, however, Yajnamurti surrendered 
+himself to the holy feet of  Ramanujacarya, saying, “You are my master. You are 
+glowing with the confidence of one who is in connection with divinity.  I realize 
+now that it is futile to argue with you.  Please accept me.”
+<br>
+<br>
+            From that day on, Ramanuja's reputation increased. During this time, he 
+toured India with his disciples, traveling as far north as Kashmir, where he 
+consulted the commentary of Bodhayana on the Vedanta Sutras.  Ramanuja was 
+also a great advocate of proper Deity worship and had a habit of reforming the 
+system of worship wherever he went.  In this way, he standardized the system of 
+worship throughout the Vaisnava temples of India, eliminating many of the 
+practices of nonVaisnavas that had become traditional.  His system was not, 
+however, greeted with much enthusisam in Jagannatha Puri, where worship is 
+performed according to the system of raga-marga, or spontaneous devotion. It is 
+said that after he attempted to reform the system of Deity worship there, Lord 
+Jagannatha became disturbed.  One night, as Ramanuja slept, he was transported 
+by the power of Jagannatha to Kurmasthan.  When he awoke, he thought he had 
+committed a great offense to Visnu.  Mistaking the deity of Kurma for a Siva
+lingam, he thought that Visnu had thrown him into a Siva temple.  When at last he 
+realized that it was a temple of Lord Kurma, Ramanuja set about reforming the 
+deity worship there.
+<br>
+<br>
+             After this, Ramanuja wrote the Sri-Bhasya, his commentary on Vedanta, 
+and his fame spread still further.  The king of Cola, who was a great follower of 
+Siva, sent a petition to all the famous scholars of South India, demanding their 
+signature.  The petition declared Siva to be the supreme.  Many scholars signed, 
+but Ramanuja refused.  When this came to the king's attention, he arranged to 
+abduct Ramanuja, who managed to escape with the help of his devoted follower, 
+Kuresa.  They exchanged garments, and Ramanuja, disguised as a householder, 
+slipped through the guards that surrounded his camp. Meanwhile the king's 
+soldiers arrested Kuresa, who had put on the sannyasa dress of Ramanuja.  This 
+king was the same king whose daughter was saved from a ghost by Ramanuja.  
+When Kuresa was dragged before the king in the dress of Ramanuja, the king 
+demanded that he glorify Siva as the supreme.  Kuresa refused.  Because 
+Ramanuja had helped the king's daughter, the king  decided to be lenient.  He told 
+his servants not to kill their prisoner, but merely to put his eyes out for refusing to 
+see the superior position of Siva.  After Kuresa was released, his eyesight was 
+restored by a miracle. The king however, did not fare so well.  He developed a 
+black boil on his neck and died. Henceforth that king became famous as “Krmi
+kantha,” or worm-throat, because of the infection that killed him.
+<br>
+<br>
+            Meanwhile, Ramanuja delivered many thousands of people to the cause of 
+Sri Vaisnavism and established many temples. He traveled through what is now 
+Madurai and Mysore, converting many Jains on his way.  At one point he defeated 
+one thousand Jains in argument, after which they committed suicide rather than 
+become Vaisnavas. 
+<br>
+<br>
+            Ramanuja was merciful not only to those in the renounced order, but also 
+to those surrendered grhasthas who had given their lives to his mission. One such 
+grhastha was Dhanurdasa. When he met Ramanuja, Dhanurdasa was very much 
+attached to his beautiful wife.  One day, Ramanuja asked him if he wanted to see a 
+real beauty, and out of curiosity, Dharnurdasa agreed.  Ramanuja took him to the 
+temple of Narayana and made him behold the beauty of the deity.  Upon realizing 
+that the Lord's beauty eclipses all beauties of this world, Dhanurdasa became a 
+great devotee and follower of Ramanuja. 
+<br>
+<br>
+            Dhanurdasa was an example of detachment.  To teach detachment to one 
+of his disciples, Ramanuja once staged the following demonstration. He had one 
+of his disciples go to the place where the sannyasis bathed to switch their clothes, 
+so that after bathing there would be some confusion.  When the sannyasis,  who 
+were all renowned scholars and renunciants, were finished bathing, they found that 
+their clothes had been exchanged.   One swami was wearing the cloth of another, 
+and so an argument ensued. As one after another finished his bath and went to find 
+his clothes, the argument grew more heated.  In this way, these great scholars of 
+renunciation were seen to be attached to some simple pieces of cloth.
+<br>
+<br>
+            Then Ramanuja sent his disciple to the home of Dhanurdasa, after first 
+arranging for Dhanurdasa to serve in the temple, thus making sure that he would 
+not be at home. The disciple went to the home of Dhanurdasa in the evening, and, 
+following Ramanuja's orders began stealing the jewelry from the body of 
+Dhanurdasa's wife. After stripping the ornaments from one side of her body, the 
+disicple was about  to go when suddenly she turned over in her sleep.  The disciple 
+was shocked and left through the window immediately.  Ramanuja had instructed 
+him to wait outside the window for the return of Dhanurdasa, to record his 
+reaction.  After some time, Dhanurdasa returned home. At that time, Dhanurdasa 
+wife asked him, “Dhanurdasa, is there something wrong at the temple?”
+<br>
+            “No, my dear. Why?”
+            <br>
+            “I am worried that they are in need of money, but ashamed to ask for it.  
+We must do something to help them.”
+<br>
+            “What makes you say that?”
+            <br>
+            “Because one of the devotees from the temple snuck in through the 
+window and began taking the jewelry from my body.  I think those poor saints 
+must desperately need our help to do something like that.”
+<br>
+            “What did you do?”
+            <br>
+            “I turned over, but he fled through the window.”
+            <br>
+            “Why did you do that?  You scared him away! Now what will we do?”
+            <br>
+            “I didn't mean to scare him.  I only turned over so that he could take the 
+ornaments from the other side of my body as well.”
+<br>
+br
+
+            Dhanurdasa chastised her saying, “If you were not so affected by false ego, 
+you would have given him all your jewels.  Now what will we do? We have failed 
+miserably!”
+<br>
+<br>
+            With this, his wife began to lament saying, “You are right. It is only my 
+pride that kept me from surrendering everything.  How will we ever make any 
+advancement?”
+<br>
+<br>
+            From his hiding place Ramanuja's disciple was astonished at the humility 
+and surrender of Dhanurdasa and his chaste wife. When the disciple returned to his 
+guru, he reported everything that had taken place.  Ramanuja then explained to 
+him the meaning of  both these events—the garments of the sannyasis and the 
+jewels of Dhanurdasa's wife:  in this case, the sannyasis were so attached to some 
+ragged bits of cloth that they were fighting over them, whereas Dhanurdasa and 
+his wife, although grhasthas, were so free from attachment to material things that 
+they were ready to have their jewels stolen by the devotees if they were needed for 
+the service of the Lord.
+<br>
+<br>
+            In this way, Ramanuja continued to instructed his disciples both by 
+example and by precept. His influence on Vaisnavism is powerfully felt to this 
+day.  His commentary on Vedanta, the Sri Bhasya  is still considered to be the 
+most formidable challenge to the commentary of Sankaracarya.  It is the most 
+famous of  the Vaisnava commentaries. Apart from the Sri Bhasya, the most 
+important of  Ramanujacarya's works are his commentary on Bhagavad-gita and 
+his Vedartha-samgraha, which summarizes the essential Vedic principles. 
+According to tradition, Sripad  Ramanujacarya lived to be 100 years old.  His 
+disciplic succession continues to this day in maintaining the traditions of Sri 
+Vaisnava practice, deity worship and philosophy that he systemized in his 
+lifetime.  Ramanujacarya passed away on the tenth day of the waning moon in the  
+month of Phalguna, which corresponds to the month of January February on the 
+Christian calendar
+<br>
+<br>
+    </p>
+</div>
+   <div id="e"> <p >
+   <h1 style="color: white;font-size: xx-large; background-color: black; text-align: center;"> Madhcvacharya</h1> 
+    According to the Sri Kurma inscriptions of Narahari Tirtha, his direct 
+disciple,  Sripad Madhvacarya was born between 1238 and lived for 79 years, until 
+1317 A.D. This is confirmed in the Anu-Madhva-Carita. According to the 
+authorized biographies compiled by his disciples shortly after his passing away, 
+Sripad Madhva was born in the village of Tulunada, which is located about 8 
+miles to the southeast of the city of Udipi in Karnataka.  He came from a family of 
+sivalli-brahmanas and was the son of Madhyageha Bhatta.  
+<br>
+<br>
+    In his Caitanya Caritamrta commentary (CC Madhya 9.245), Sripad 
+Bhakdivedanta Swami comments as follows: “In his childhood, Madhvacarya was 
+known as Vasudeva, and there are some wonderful stories surrounding him. It is 
+also said that his father piled up many debts, and Madhvacarya converted tamarind 
+seeds into actual coins to pay them off. When he was five years old, he was 
+offered the sacred thread. A demon named Maniman lived near his abode in the 
+form of a snake, and at the age of five, Madvacarya killed that snake with the toe 
+of his left foot. When his mother was very disturbed, he would appear before her 
+in one jump. He was a great scholar even in childhood, and although his father did 
+not agree, he accepted sannyasa at the age of twelve.”
+<br>
+<br>
+     When he was only 12 years old, Madhvacarya left home and accepted the 
+renounced order of life, under the guidance of Acyutapreksa, his sannyasa-guru. 
+Madhva's sannyasa name was Purnaprajna Tirtha.  His deep study of the scriptures 
+was unparalleled, and had convinced him of the uselessness of the Advaita 
+interpretation of Vedanta.  He was inspired to revive the original and pure 
+interpretation of Vedanta which promotes personal theism. He was to do this on 
+the basis of a profound and  innovative interpretation of the scriptures, for which 
+he was to become famous. This interpretation is known as Dvaita-dvaita-vada, or 
+pure dualism.  
+<br>
+<br>
+    After his initiation, Purnaprajna spent some time in the asrama of 
+Acyutapreksa where he carefully studied the Vedanta commentaries of different 
+acaryas, beginning with the ^stasiddhi of Vimuktatman. But soon, Purnaprajna's 
+expertise in scriptural argument and his determination to establish personal theism 
+as the conclusion of Vedanta grew to the point where he could defeat 
+Acyutapreksa in argument.  Recognizing Purnaprajna's superior scholarship, 
+Acyutapreksa made him the head of his asrama.  Purnaprajna was also awarded 
+the title ananda-tirtha, by which he is often referred to in various scriptural 
+literatures. 
+<br>
+<br>
+    After he became the temple authority  in the asrama of Acyutapreksa, 
+Purnaprajna began training disciples, preaching his interpretation of Vedanta and 
+defeating many scholars from different schools of philosophy, including 
+Buddhists, Jains, Advaitins, and various impersonalists, agnostics, logicians, and 
+the practioners of materialistic religion. His success in defeating all opposing 
+scholars inspired him to tour South India in an attempt to preach the philosophy of 
+personal theism and devotion to Visnu far and wide.   At this time, he had 
+completely formulated all the details of his philosophical system, but had not yet 
+committed his system to writing. 
+<br>
+<br>
+    His tour of South India was quite extensive: it took him from Udipi to the 
+southernmost tip of India, (Kanyakumari)and from there to Ramesvaram, Sri 
+Rangam, and many other important holy places of pilgrimage.  Wherever he went 
+he debated the prominent scholars of the impersonal school, smashing their 
+interpretations of Vedanta with his brilliant advocacy of dualistic theism. His 
+scathing criticisms of Sankaracarya's impersonal Vedanta met with stiff 
+opposition, but no one could overcome him in scriptural argument or logical 
+debate.  It is said that when Madvha was at Kanyakumari he was challenged by a 
+great impersonalist scholar of the Sankara school to write his own commentary on 
+Vedanta if he disagreed with the teachings of the master.  At that time, it is said 
+that Madhva promised to write his own Vedanta commentary, fully elaborating the 
+proper conclusions of personal theism. At Sri Rangam he also expressed a certain 
+degree of dissatisfaction with the conclusions of Ramanuja's visistadvaita-vada, in 
+that he felt it did not go far enough to refute the dangerous speculative philosophy 
+of Sankaracarya.  This further added to the young Madhva's  firm determination to 
+someday compose his own commentary incorporating his own unique 
+interpretation. 
+<br>
+<br> 
+    After completing his South Indian tour, Madhva decided to tour North 
+India as well. With his resolve to complete his own Vedanta commentary growing 
+day by day, he was eager to begin the work.  But Madhva wanted to have the 
+blessings of the author of Vedanta, Vedavyasa himself, before beginning such an 
+ambitious project. He set out for North India and the Himalays, then,  in order to 
+achieve the benedictions of Vedavyasa, for it was said that Vyasa, being immortal, 
+still resided in his asrama at Badarainatha, although he never made himself visible 
+to mortal eyes. 
+<br>
+<br>
+    After a long journey by foot, Sripad Madhva finally arrived at the 
+Anantamatha at Badarinatha.  There he remained for seven weeks, absorbed in 
+fasting, prayer, and devotional meditation. Inspired from within, he hiked further 
+up into the Himalayas, to Badarikasrama, in upper Badari, where Vyasadeva has 
+his hermitage. There he met Vedavyasa and explained his commentary on 
+Bhagavad-gita to Vyasa himself, who approved. When he met Vyasa, he was 
+given a salagrama-sila which is known as Astamurti.  After discussing the 
+scriptures with Vyasadeva, Sripad Madhvacarya's understanding of their inner 
+meaning became even more profound. He remained at Badarikasrama for some 
+months until he finished composing his commentary on Bhagavad-gita, 
+whereupon he returned to the Anantamatha. At that time Madhva's companion 
+Satya Tirtha wrote down the entire commentary.  At this time, Madhva also wrote 
+his commentary on Vedanta.
+<br>
+<br>  
+    Bidding farewell to Badarinatha, Madhva began the long journey home. 
+On the way, he again met with and defeated many scholars of various 
+philosophical schools.  He traveled through Bihar, Bengal, Orissa, and 
+andhradesa.  The Madhva-vijaya describes how when Madhva reached Ganjama, 
+on the banks of the river Godavari, hed met two prominent scholars, who were 
+well-versed in all the important scriptures: Sobhana Bhatta and Swami Sastri. 
+After converting them to his school, these scholars became renowned as important 
+followers of Sripad Madhva.  They became famous as Padmanabha Tirtha and 
+Narahari Tirtha and are regarded as the principle acaryas of the Madhva school 
+after Madhva himself.  Narahari Tirtha is famous for his commentaries on 
+Madhva's Gita-bhasya and Karma-nirnaya. He was the Prime Minister of Kalinga 
+between 1271 and 1293. Padmanabha Tirtha wrote commentaries on many of 
+Madhva's works, including Madhva's Brahma-sutra-bhasya, his Anuvyakhyana, 
+and his Dasa-prakaranas. He was the first commentator on many of the major 
+works of Madhvacarya. 
+<br>
+<br>
+    After converting Sobhana Bhatta and Swami Sastri, Sripad Madhvacarya 
+journeyed through Andhrapradesa, Maharastra and Karnataka arrived at last in 
+Udipi. Upon his return to Udipi from North India, Madhva confronted 
+Acyutapreksa, who had refused to accept his ideas previously.  Now the roles were 
+reversed; guru became disciple and disciple became guru. Madhva converted 
+Acyutapreksa from Sankara's Vedanta to the cause of Vaisnavism and accepted 
+him as a follower. 
+<br>
+robust
+    As a result of Madhva's success in defeating opposing scholars and gurus, 
+his reputation spread, and enthusiasm grew for his new system of  Vedanta 
+philosophy. As his commentaries on Bhagavad-gita and Vedanta gained wider and 
+wider acceptance, followers and new converts began to join his camp from all over 
+India, attracted by his charismatic personality, invincible logic and scriptural 
+knowledge, and his inspired faith. 
+<br>
+<br>
+    While he stayed in Udipi, it was Madhva's regular habit to bathe in the 
+ocean. One day, he was sitting on the beach absorbed in contemplation upon Sri 
+Krsna. At that time, he spotted a ship, bound for Dvaraka, that was about to 
+founder on a sand bar. He signaled the ship to safety, and it was able to safely 
+approach the shore. The captain of the ship wanted to bestow some present upon 
+Sri Madhvacarya, and he accepted a large chunk of gopi-candana tilaka.  As it was 
+being presented to the acarya,  the large chunk of tilak broke in half, revealing a 
+huge deity of Krsna. Everyone was astonished to find a Krsna deity within the 
+block of tilak, but Madhvacarya was not unaccustomed to miracles and accepted it 
+as the Lord's grace. At that time he composed some beautiful prayers glorifying 
+Sri Krsna, and soon after that the Deity was installed at the temple in Udipi where 
+it remains today. The Deity weighed so much that even thirty men had difficulty 
+moving it.  Madhva, however, was superhumanly powerful—it is said that he was 
+an incarnation of Vayu—and managed to personally carry the Deity to Udipi. 
+<br>
+<br>
+    After installing the Deity of Krsna in Udipi, he revised the system of Deity 
+worship, establishing a strict regimen of ceremonial ritual and proper conduct 
+among his followers, imposing among other things the rigorous observance of 
+fasting on Ekadasis.
+<br>
+<br>
+    Having achieved such great success at home, it was time for Madhva to 
+once more travel afar. He began a second pilgrimage to North India, where he 
+once again visited Badarikasrama.  The Madhva-vijaya, written by the son of one 
+of Madhva's disciples describes how Madhva used his sharp wits, his knowledge 
+of many languages such as Turkish and Persian, and his courage to overcome great 
+obstacles in his preaching. While on his North Indian tour, Madhva and his 
+disciples arrived at a place in the province of Ganga Pradesh where political 
+tensions between Hindus and Muslims prevented them from crossing the river. 
+The Hindus were on one side of the river and the Muslims on the other side. No 
+one dared cross, and no boat was available. Madhva and his followers, without 
+regard for the Muslim soldiers who guarded the crossing, swam across the river. 
+The entire camp was placed under arrest.  Madhva himself was taken before the 
+Muslim King, Sultan Jalal-uddin-Khilji, who demanded an explanation. When 
+Madhva was finally allowed to speak on his own behalf, he spoke in Persian, 
+addressing the king at length on devotional theism.  Seeing the intensity and 
+saintly purity of Sripad Madhvacarya, the Sultan's heart was softened.  So 
+impressed was he with Madhva that he wanted to offer him land and money, but 
+Madhva set the example of renunciation by humbly declining the Sultan's offer. 
+<br>
+<br>
+    Where wit would not help, Madhva would sometimes use his superhuman 
+strength to save a situation. Once his traveling companion and sannyasi disciple 
+Satya Tirtha was attacked by a fierce Bengal tiger. Fearless, Madhva went to the 
+rescue. After wrestling the tiger away from Satya Tirtha, he sent it away with its 
+tail between its legs. Another time, while walking on pilgrimage through a 
+dangerous part of India, he was attacked by murderous dacoits, but he easily held 
+them off. 
+<br>
+robust
+    Madhva was a multi-faceted personality who lived a long and healthy life. 
+He was a natural leader who believed in physical culture as well as intellectual, 
+moral, and spiritual culture. He took part in many athletic activities, such as 
+wrestling, swimming, and mountain-climbing, which served him well in the 
+Himalayas. As he came from a family of brahmanas that had descended from the 
+warrior brahmana and incarnation of Godhead, Parasurama, he was tall, strong, 
+and robust. It was reputed that there was no limit to his bodily strenghth.  The 
+Madhva-vijaya records how a strongman named Kadanjari who was said to have 
+the strength of thirty men once challenged Madhvacarya to a contest of strength. 
+Madhvacarya placed the big toe of his foot firmly upon the ground and asked 
+Kadanjari, the famous strongman, to see if he could lift it. Straining with all his 
+brawn again and again, the mighty Kadanjari was unable to move even the big toe 
+of Madhvacarya.  According to Trivikrama Pandita, Madhvacarya was endowed 
+with all the thirty-two bodily symptoms of a great personality. He had a deep, 
+sonorous, and melodic voice and was an expert singer.  His recitation of the verses 
+of Srimad-Bhagavatam was regarded as being especially sweet. 
+<br>
+<br>
+    In this way, Madhva traveled extensively throughout the whole of India. 
+He returned to South India after having visited Badarinatha, Delhi, Kuruksetra, 
+Benares, and Goa. After this, his travels were mostly limited to those provinces of 
+South India near Udipi.  After Sankaracarya, who had also traveled extensively, 
+He was the second important Vedanta acarya to travel  throughout India, and his 
+broad preaching campaign had a lasting effect. Gradually, his following grew, as 
+great personalities from all parts of India accepted him as guru.  The Madhva
+vijaya mentions that he had disciples from many lands, and his present day 
+followers still include the speakers of eight different languages—Tulu, Kannada, 
+Konkani, Maratha, Telugu, Southern Saurastri, Bengali, and Hindi.  
+<br>
+<br>
+    After returning to Udipi, Madhva once again immersed himself in prolific 
+literary activity. He wrote commentaries on the ten major Upanisads. He wrote ten 
+major philosophical treatises, the Dasa-Prakaranas, as well as what many consider 
+his most important work, the Anu-Vyakhyana.  He wrote a summary of 
+Mahabharata called the Moksa-dharma, and he also commented on Srimad
+Bhagavatam. 
+<br>
+<br>
+    Madhvacarya's dedication to the Lord and his deep scholarship made him a 
+feared and hated enemy of the followers of Sankaracarya, who had a vested 
+interest in maintaining their position as the only bona fide Vedantists. It has been 
+said, “Of all the plagues with which mankind is cursed, ecclesiastical tyrrany's the 
+worst.”  The tyrrany of the acaryas of the Srngeri-matha founded by Sankaracarya 
+led them to attack Sripad Madhva with every means at their disposal.  They 
+employed various means to harass the followers of Madhva. They tried to prove 
+that Madhva did not come from any authorized disciplic succession. Finally they 
+challenged Madhva to a debate.
+<br>
+<br>
+    The Sankarites chose as their champion pandita a highly learned scholar 
+named Pundarika Puri, who was famed for his erudition and expertise in argument. 
+In the debate with Madhva he was humiliated. In arguing with Madhva Pundarika 
+was like a schoolboy facing a professor. Aching for vengeance, the defeated 
+pandita arranged for one of his cohorts, a sannyasi named Padma Tirtha, to steal a 
+priceless collection of ancient Sanskrit scriptures from the library of Sripad 
+Madhvacarya. The books were later recovered with the help of King Jayasimha of 
+Kumla. 
+<br>
+<br>
+    After Jayasimha Raja recovered the books of Madhvacarya, an audience 
+was arranged between the Jayasimha and Madhva. Their meeting was to be 
+followed by a debate between the king's own court pandita and Madhva. The 
+pandita, Trivikrama Pandita, a resident of Visnumangala, was the foremost 
+authority on impersonal Vedanta in the land of Kumla and an expert poet. They 
+met in the temple of Kudil. At the end of the day's discourse, Trivikrama Pandita 
+had failed to defeat Madhva, but he refused to surrender.  The debate was 
+continued on the following day. The next day, Trivikrama Pandita used all his 
+learning, his wit, and his power of argument in an attempt to embarrass Madhva, 
+but after exhausting himself was again unable to defeat him. This went on for 
+fifteen days, when Trivikrama Pandita, his intellect spent, his doubts destroyed, 
+recognized Sri Madhva as his guru. He surrendered to the lotus feet of Sripad 
+Madhvacarya and was accepted by him as a disciple. Madhva ordered him to write 
+a commentary on Vedanta.  Trivikrama Pandita's commentary is called the Tattva
+pradipa.  His conversion was a turning point in Madhva's preaching mission. After 
+his conversion, Trivikrama Pandita's own brother and seven other important 
+scholars took sannyasa from Madhva and became the first directors of the eight 
+Madvhaite monasteries in Udipi. Trivikrama Pandita's son, Narayanacarya who 
+later wrote the Madhva-vijaya. 
+<br>
+<br>
+    In the final years of Madhva's life, he wrote further commentaries on the 
+scriptures, including the Nyaya-vivarana, the Karma-nirnaya, the Krsnamrta
+Maharnava, and others. By this time, Madhvacarya was growing old. He had 
+completed what he set out to do.  He had preached his message far and wide, 
+elaborated his philosophical system in numerous commentaries, and had many 
+trained missionaries who could carry on his work with great energy. He had 
+written original works of such a profound character that they would continue to 
+influence devotional theism well into the 20th century.  He had established the 
+worship of Krsna in Udipi and had given sannyasa to expert scholars and veteran 
+preachers such as Padmanabha Tirtha, Narahari Tirtha, Madhava Tirtha, and 
+Aksobhya Tirtha, who would succeed him in promoting the philosophical ideals of 
+pure dualistic theism.  As he finished his commentary on the Aitereya Upanisad,  
+on the verge of his eightieth birthday, Sripad Madhvacarya passed away from this 
+world and entered the eternal Vaikuntha planets on the ninth day of the full moon 
+in the month of Magh (corresponding to January-February) in the year 1317.
+<br>
+<br>
+    The essential principles of Sri Madhvacarya's teachings—where they run 
+parallel to the teachings of Sri Caitanya Mahaprabhu—have been summarized in 
+ten points by Baladeva Vidyabhusana in his Prameya-Ratnavali. These ten points 
+are as follows:
+<br>
+<br>
+<h3 style="text-align: center; font: bold;">shri madvhah praha vishnum paratamam akhilamnaya vedyam ca cisvam <br>
+    satyam bhedam ca jivam hari carana jusas tartamyam ca tesham  <br>
+    moksham vishnv-anghri-labham tad-amala-bhajanam tasya hetum pramanam <br>
+    pratyaksadi trayam cety upadisati hari krsna-caitanya chandra</h3>
+    <br>
+    <br>
+"Shri Madhvacaharya taught that: <br>
+1) Krishna, who is known as Hari is the Supreme Lord, the Absolute. <br>
+2) That Supreme Lord may be known through the Vedas. <br>
+3) The material world is real. <br>
+4) The jivas, or souls, are different from the Supreme Lord. <br>
+5) The jivas are by nature servants of the Supreme Lord. <br>
+6) There are two categories of jivas: liberated and illusioned. <br>
+7) Liberation means attaining the lotus feet of Krishna, that is, entering into an 
+eternal relationship of service to the Supreme Lord. <br>
+8) Pure devotional service is the cause of this relationship. <br>
+9) The truth may be known through direct perception, inference, and Vedic 
+authority. <br>
+ <br>
+
+These very principles were taught by Shri Chaitanya Mahaprabhu."
+<br>
+In his Caitanya Caritamrta commentary (CC Madhya 9.245), Sripad 
+Bhakdivedanta Swami comments: “For further information about Madhvacarya, 
+one should read Madhva-vijaya by Narayana Acarya.”
+<br>
+<br>
+    </p></div>
+    <br>
+    <br><b>
+        <br>
+        <br>
+    </b>
+   <DIV id="f"><P>
+   <h2 style="background-color: black; color: white; text-align: center; font-family: Georgia, 'Times New Roman', Times, serif;"> Shri Baladeva Vidyabhusana</h2> 
+         
+   <br>
+   <br>Shrimad Baladev Vidyabhusan Prabhu was a pure devotee of the highest 
+order, who cared for nothing but the service of the Lord.  He didn't have a spot of 
+desire for name and fame. He was the composer of many scriptures which are as 
+priceless as precious gems, for the ultimate benefit of all those who have taken 
+human birth. The exact location of his birth, the names of his mother and father, 
+and their family tree is not known.  The exact circumstances of his birth and 
+childhood are, therefore, unknown.  Still, some are of the opinion that that he took 
+birth in a place called Baleshvara, a village neighboring Remuna, in the early part 
+of the 18th century A.D, as the son of a vaisya, an agriculturist.  At an early age he 
+became learned in Sanskirt grammar, poetry, rhetoric, and logic.  After becoming 
+expert in all these subjects, he began wandering to different places of pilgrimage.  
+After wandering about in this way for some time, and after visiting many holy 
+places, he happened to stay at a temple of the Tattvavadi followers of Shri 
+Madhvacharya.  There, he became fluent in his understanding of the tattvavada
+siddhanta, that is, the philosophical and theological conclusions of the followers of 
+Madhva. After this, he took sannyasa, and preached the tattvavada-siddhanta very 
+vigourously throughout the length and breadth of India. 
+<br>
+<br>
+            As he wandered from one place to the next, he gradually came to 
+Jagannatha Puri. .  There he remained and preached for a few days.  At that time, 
+he chanced to meet one of the foremost disciples of Shri Rasikananda Deva, 
+Pandit Shri Radha-Damodara, with whom he discussed devotional principles. At 
+that time, Shrimad Radha-Damodara dev Goswami instructed Baladev on the 
+subject of Shri Gourasundara's pastimes of mercy and His teachings on Gaudiya 
+Vaishanva siddhanta to Sarvabhauma Bhattacharya.  After hearing the divine 
+wisdom spoken by Shri Radha-Damodara Goswami, Baladeva's heart was deeply 
+moved.  After a few days of hearing from him, he accepted initiation into the 
+Radha-Krishna mantra, and began studying the Sat-Sandarbhas of Jiva Goswami 
+at the holy feet of his gurudeva, Radha-Damodara Goswami.
+<br>
+<br>
+            After a short time, Baladeva became expert in the Gaudiya Vaishanva 
+siddhanta.  After staying with Radha-Damodara Goswami for some time, he was 
+ordered to further his studies in Gaudiya Vaishnavism by going to Vrindavan and 
+taking shelter at the holy feet of Vishvanatha Cakravarti Thakura. After first 
+visiting Nabadwipa, he soon arrived in Vrindavan. 
+<br>
+<br>
+            Shri Visvanatha Chakravarti Thakur (Shri Harivallabha dasa), was very 
+happy to see Baladeva's submission, modesty, learning, and renunciation. From 
+that day forward, for some time, he kept Baladeva by his side and taught him the 
+acintya-bheda-abheda philosophy of Shri Chaitanya and many other important 
+siddhantas related to the Gaudiya Vaishnava conception of Krishna-bhakti. From 
+this point on, Shri Baladeva's life and soul was fully dedicated to the theistic 
+conception of the Gaudiya Sampradaya.  His mind was fixed on this, and with one
+pointed determination, he now began preaching this line to the exclusion of all 
+others. 
+<br>
+<br>
+            One day, in Jaipur, in the royal court, the Ramanuja sampradaya began 
+arguing a case in connection with the Gaudiya sampradaya. They informed the 
+king that the Gaudiya sampradaya had no commentary on the most important 
+revealed scripture of Vedic religion—Vedanta; therefore they had no siddhanta 
+and no real sampradaya, or school. As a consequence they should give up their 
+service of the deities of Govinda and Gopinatha, and entrust with those who were 
+bona fide members of a genuine sampradaya. At that time, the king of Jaipura was 
+a follower of the Gaudiya sampradaya. He immediately sent word of the 
+controversy by messenger to Vishvanatha Cakravarti Thakur in Vrindavan, 
+wanting to know if the Gaudiya sampradaya actually did have any commentary on 
+theVedanta.  If there was, the king wanted that the commentary be sent 
+immediately to Jaipur to satisfy the scrutiny of the pandits from the Ramanuja 
+Sampradaya.
+<br>
+<br> 
+            At this time, Shri Vishvanatha Chakravarti was very old and infirm. It was 
+impossible for him to  make the arduous journey to Jaipur. He sent his student and 
+disciple, Shri Baladev, in his place. Baladeva Vidyabhusan was an expert scholar 
+in all the important scriptures. In the midst of a huge assembly of pandits from the 
+Ramanuja sampradaya, Baladeva challenged them all to argue with him in 
+scholarly debate. A long, and hard-fought debate took place, with tumultuous 
+arguing from the Ramanuja school. Still, none of them could stand before his 
+conclusive statements, keen scholarship, and penetrating intellect.  Baladeva 
+argued that the founder of the Gaudiya Sampradaya, Shri Chaitanya Mahaprabhu 
+established the Shrimad-Bhagavatam as the topmost commentary on Vedanta.  
+The Bhagavatam itself claims that it is bhashyanam brahma-sutranam, the natural 
+commentary on Vedanta. This is confirmed on the basis of evidence given by Jiva 
+Goswami in his Sat Sandarbha. Therefore, the Gaudiya sampradaya has chosen to 
+accept Shrimad-Bhagavatam as the original commentary on Vedanta, and sees no 
+need for a separate commentary. 
+<br>
+<br>
+            At that point, the pandits from the Ramanuja sampradaya shouted: "He 
+admits that there is no commentary! They have no commentary!" Having no other 
+recourse, Shri Baladeva Vidyabhusan promised to show them the Gaudiya 
+commentary on Vedanta within a few days. The pandits were astonished to think 
+that such a thing existed.  They were suspicious that this might be some kind of 
+trick, but were silenced for the time being.
+<br>
+<br>
+            Very troubled within his mind, Shri Baladeva Vidyabhusana went to the 
+temple of Shri Govinda, the deity of Rupa Goswami. After offering his eightfold 
+obeisances before the deity, he related everything that had taken place. That night 
+in a dream, Shri Govinda told him, you must compose the commentary.   That 
+commentary will be personally sanctioned by me. No one will be able to find any 
+fault in it.  Seeing this in his dream, Baladeva became very happy, and his heart 
+was full of strength, ready for the task at hand. After this, he meditated on the 
+lotus feet of Govinda and began writing his commentary.  Within a few days it 
+was completed. This commentary became known as the Govinda Bhashya 
+commentary on Vedanta.
+<br>
+<br>
+            In an addendum appended to the Govinda Bhashya, after it was published, 
+Shri Baladeva has written, vidyarupam bhushanam ye pradaya, khatim nitye teno 
+yo mamudarah, Shri govinda-svapna-nirdishtha bhashye, radhabandhurangah sa 
+jiyat.  "May Shri Govinda be all glorious.  By his mercy, he  revealed this 
+commentary to me in a dream. The commentary revealed by him is especially 
+appreciated by the highly learned, and as a result of this  I have been given the 
+name Vidyabhushan, but it is Shri Govinda who deserves all credit. May that Shri 
+Govinda who is the most dear life and soul of  Shri Radhika,  be all-victorious." 
+<br>
+<br>
+            With the Govinda Bhashya commentary in hand, Baladeva Vidyabhushan 
+arrived at the assembly hall of the king, where the pandits were waiting for him. 
+When he showed them his commentary, they were speechless. The Gaudiya 
+sampradaya was proclaimed victorious.  The king and all the Gaudiya Vaishnavas 
+were supremely happy.  At that time the pandits gave Shri Baladeva the name 
+"Vidyabhushana," or one whose ornament is knowledge, in honor of his great 
+scholarship.  The year was 1628, Shaka era. From the day forward, the king of 
+Jaipur decreed, everyone would attend the aroti of Shri Govinda, the deity beloved 
+by the Gaudiya Vaishnavas, who was ultimately responsible for such a wonderful 
+commentary on Vedanta. 
+<br>
+<br>
+            The Ramanuja pandits, falling under the influence of Shri Baladeva 
+Vidyabhusana, accepted him as their acharya and wanted to become his disciples. 
+With great humility, Baladeva Vidyabhushana refused, explaining that there are 
+four sampradayas, among which the Shri Sampradaya is a genuine school that 
+preaches servitude to God as the best religious process. By advancing the views of 
+the Gaudiya sampradaya, he meant no disrespect to the Shri sampradaya.  To 
+insult the Shri sampradaya would be a great offense, he said.
+<br>
+<br>
+            Shripad Baladeva Vidyabhushan returned from Jaipur to Vrindavan 
+carrying the message of his victory.  Upon returning, he submitted to the lotus feet 
+of Shri Vishvanatha Chakravarti Thakura and told him the news. All the visiting 
+Vaishnavas and the residents of Vrindavan were delighted, and Vishvanatha 
+Chakravarti Thakura bestowed his blessings upon Baladeva Vidyabhusana. 
+<br>
+<br>
+            After this, Baladeva Vidyabhusana began writing a commentary on the Sat 
+Sandarbha. Soon Vishvanatha Chakravarti Thakura passed away, and the 
+Vaishnava community felt as if a great beacon of divine light had been 
+extinguished. At that time, Shri Baladeva Vidyabhusan became regarded among 
+the Vaishnava community as the keeper of the flame, the leader among those who 
+understood the teachings of Shri Chaitanya.
+<br>
+<br>
+            In his teachings, Baladeva establishes the transcendental position of the 
+Vedas, and then argues that they are the best evidence for knowing the supreme 
+truth. In his Siddhanta-darpana, Baladeva has explained the position of 
+transcendental sound in relationship to Krishna and his holy name as follows:
+<br>
+ <h3 style="text-align: center; font: bold;">ekameva pram tattvam vachyavachaka bhavabhak <br>
+    vachyah sarveshvaro devo vachakah pranavobhavet <br>
+    matsya-kurma-adibhir-rupair-yatha vachyo bahur-bhavet <br>
+    vachako'pi tatharthadi-bhavadbahur-udiryate <br>
+    adyantarahitatvena svayam nityam prakirtite <br>
+    avirbhava tirobhavau syatamasya yugeyuge</h3>
+    <br>
+            "The one absolute truth has two categories: the named (Krishna) and the 
+name (Om). Parameshvara, Shri Krishna, the absolute person is the named; 
+pranava, or omkara (Om) is the name. The named, or Parameshvara Shri Krishna, 
+reveals himself in different forms as Matsya, Kurma, and many other forms. In the 
+same way the name of the Supreme Lord expands into many different forms; such 
+as the transcendental syllable Om, the gayatri mantram, and the Vedas themselves. 
+There is no limit to the Supreme Personality of Godhead; he has no beginning and 
+no end. As a consequence, his glorification is also eternal.  He appears within this 
+material world, stays for some time, and again disappears according to his own 
+sweet will."
+<br>
+<br>
+            Baladev explains the potency of Godhead in his Siddhanta-darpana: "The 
+Lord has three potencies—thinking (jnana) feeling (kriya) and willing (bala). 
+Through these three potencies he causes the material creation to come into being. 
+The rays of consciousness emanating from him—the jiva souls—are his separated 
+parts and parcels. By his thinking, feeling, and willing, they too come into being. 
+The Vedas are spoken by the Lord, who is all-perfect.  The Vedas are therefore 
+free from the four defects of material existence: error, cheating, illusion, and 
+imperfect perception.  And so, the Vedas are the perfect form of evidence for 
+understanding the Supreme Truth. The Vedas glorify Krishna as the absolute 
+truth.  The Puranas and Itihasas are as good as the Vedas.  They too glorify 
+Krishna as the absolute truth."
+<br>
+<br>
+            In his Vedanta-samantaka, Baladev has expanded on this thesis of the 
+Vedas being the best evidence for understanding the Supreme Godhead. There he 
+says: <br>
+tadevam sarvatah shreishtha shabdasya sthite tattvanirnayakastu 
+shrotilakshana eva na tvarshalakshanopi.
+<br>
+<br> "There are different ways of knowing 
+what is truth: pratyaskha,direct perception, anuman,  inference, hypothesis, and 
+deduction, shabda, the words of the authorities arthapati, interpretation, 
+anupalabdhi, negative inference, sambhava, the laws of probability, and aitihya, 
+history.  Of all these  methods of arriving at truth, shabda, hearing from 
+authorities, is best.  The best source of knowledge about the absolute is the shruti: 
+revealed truth received from Vedic authority.  Different scholars always entertain 
+different opinions about reality, but the Vedic shastras are eternal and 
+transcendental, moreover they are free from the four defects of material existence, 
+having sprung directly from the Supreme Lord Himself. therefore they are the best 
+evidence for knowing the absolute truth. " (Vedanta Samantaka 1/51)
+<br>
+<br>
+            What has been proved on the basis of solid evidence, pramana, is called 
+prameya. Baladev has written a book called Prameya Ratnavali, in which he states 
+nine principles that he has established are facts, proven by the incontrovertible 
+evidence of the Vedas. The teachings of Madhva-Gaudiya Vaishnavism as it has 
+descended from Madhvacharya to Shri Chaitanya Mahaprabhu have been 
+summarised in the Prameya Ratnavali. 
+<br>
+<br>His nine principles are stated in the 
+following verse (PR 8): <br>
+<h3 style="text-align: center; font: bold;">shri madvhah praha vishnum paratamam akhilamnaya vedyam ca cisvam <br>
+    satyam bhedam ca jivam hari carana jusas tartamyam ca tesham  <br>
+   moksham vishnv-anghri-labham tad-amala-bhajanam tasya hetum pramanam <br>
+    pratyaksadi trayam cety upadisati hari krsna-caitanya chandra</h3> 
+    <br>
+ "Shri Madhvacaharya taught that: <br>
+ 1) Krishna, who is known as Hari is the Supreme Lord, the Absolute. <br>
+ 2) That Supreme Lord may be known through the Vedas. <br>
+ 3) The material world is real. <br>
+ 4) The jivas, or souls, are different from the Supreme Lord. <br>
+ 5) The jivas are by nature servants of the Supreme Lord. <br>
+ 6) There are two categories of jivas: liberated and illusioned. <br>
+ 7) Liberation means attaining the lotus feet of Krishna, that is, entering into an 
+eternal relationship of service to the Supreme Lord. <br>
+ 8) Pure devotional service is the cause of this relationship. <br>
+ 9) The truth may be known through direct perception, inference, and Vedic 
+authority. <br>
+ These very principles were taught by Shri Chaitanya Mahaprabhu."
+ <br>
+ <br>
+            According to Baladeva there are five categories of tattvas or truths which 
+constitute reality: ishvara, God; jiva, soul; prakriti, matter; kala, time; and karma, 
+action. Ishvara, or God, is the greatest.  He is all-knowing, he is the utmost 
+realization of transcendental bliss, and his very nature is ecstasy. He is full in all 
+qualities and is the absolute person. He is the master of everything, and is eternally 
+free from birth and death. He is the master of all the gods headed by Brahma and 
+Shiva. He is the supreme husband, the Lord of lords, and the Supreme Person, the 
+worthiest of receiving prayers.  He alone remains as the absolute truth even after 
+this material world (which is his separated material energy) is destroyed along 
+with all the demigods such as Brahma, Shiva, and Indra. 
+<br>
+<br>
+            Baladeva further explains that Krishna has three energies, parashakti, 
+kshetrajna-shakti, and maya-shakti. Parashakti means svarupa-shakti, or the Lord's 
+internal potency.  Kshetrajna-shakti means jiva-shakti, or the living beings, and 
+maya-shakti means the Lord's external potency, his potency for keeping the souls 
+in illusion. This explanation is on the basis of the Vishnu Purana.  He goes on to 
+explain that there is no difference between the body and soul of God. They are one 
+and the same.  As Krishna, the Supreme Lord has two hands, he plays a flute, he 
+has a transcendental form of eternity, knowledge, and bliss, and he is known by 
+the names Govinda and Gopal.  Lakshmidevi is nondifferent from him, in that he 
+is the Supreme Energetic and She is His Supreme Energy.  (sei jaganmata lakshmi 
+vishnur anapayini shakti) This confirmed throughout the shastra. Whatever form 
+the lord appears in, there is a corresponding Lakshmi form who acts as his eternal 
+consort.   When the Lord appears as a god, Lakshmi appears as a goddess.  When 
+the Lord advents as an ordinary human being, Lakshmi also descends upon this 
+earth as an ordinary human being. Baladeva Vidyabhushan says: teshu sarveshu 
+lakshmi-rupeshu radhayah svayam laksmitvam mantavyam sarveshu bhagavad
+rupeshu krishnasya svayam bhagavatvavat: (Vedanta-samantaka 2.37) Of all the 
+manifestations of Lakshmidevi, Shrimati Radharani is the Supreme Goddess, just 
+as amongst so many avatars of Godhead, Krishna is the supreme Personality of 
+Godhead.  This is confirmed in the Brihad-Gautamiya Tantra,which states, "Shri 
+Radhika is the Supreme Goddess. Her very nature is Krishna, for her very 
+existence is permeated by Krishna.  Therefore she is known as Krishnamayi, or 
+one who is full of Krishna. She is known as Paradevata, for she is the Supreme 
+Goddess. All other goddesses are subordinate to her. She is the Supreme Lakshmi 
+and her transcendental effulgence surpasses all conceptions of brilliance. She is 
+the supreme enchantress, for she enchants Krishna Himself, who is capable of 
+charming millions of cupids."
+<br>
+<br>
+            Baladev cites Shaunaka Muni who says in Shrimad-Bhagavatam that of all 
+the avatars, expansions of Godhead, and Personalities of Godhead, Krishna is the 
+Supreme Personality of Godhead. The worship of Krishna, must therefore be 
+regarded as the highest form of worship. 
+<br>
+<br>
+            According to Baladeva, the jiva souls are the atomic spiritual energy of the 
+Lord. The souls are eternal and can never be destroyed by any means. The soul's 
+true eternal nature is to be filled with transcendental knowledge: sa ca jivo 
+bhagavadaso mantavyah dasabhuto harereva nanyasyaive kadacaneti padmat 
+(Vedanta-samantaka 3.11) "It is the constitutional nature of the soul to be a 
+servant of Bhagavan Shri Krishna. It is the version of the Padma-Purana that the 
+soul is an eternal servant of Hari, and has no other genuine position." By surrender 
+to the lotus feet of a spiritual master who is a devotee of Krishna,one attain 
+Krishna-bhakti by the guru's mercy. Upon attaining Krishna-bhakti one gets 
+Krishna Himself.
+<br>
+<br>
+            In His Vedanta-samantaka, Shri Baladeva Vidyabhusana offers the 
+following prayer to the lotus feet of his gurudeva, Shri Radha-Damodara 
+Goswami:
+<br>
+<h3 style="text-align: center; font: bold;">
+    <br>
+    radhadidamodara nama vibhrata <br>
+    viprena vedantamayah syamantaka <br>
+    shri radhikayairviniveditomaya <br>
+    tasyah pramodam sa tanotu sarvada</h3> 
+    <br>
+    <br>
+ Having been deputed to do so by my gurudeva, the brahmana named Shri Radha
+Damodara Goswami, I have compiled this commentary on the Vedanta known as 
+Vedanta-syamantaka for the sake of Shrimati Radharani's pleasure.  This 
+commentary is a summary of the important points of Vedanta. May it be pleasing 
+to  Shri Radhika. 
+<br>
+<br>
+            Shri Baladeva Vidyabhusana had two superexcellent disciples who were 
+perfected souls. Their names were Shri Uddhava Dasa and Shri Nandana Mishra. 
+<br>
+Among the books compiled by Shri Baladeva Vidyabhusana were as follows:  <br>
+            His commentary on Vedanta called the Govinda-bhashya; the "jewel of 
+conclusions" or Siddhanta Ratna; Sahitya Kaumudi; a summary of Vedanta 
+philosophy known as Vedanta Syamantaka; the "jewel of factual principles" 
+(outline the nine principles held in common by both the Madhva and Chaitanya 
+schools) known as Prameya Ratnavali; a summary of Gaudiya Vaishnava 
+principles called the Siddhanta Darpana; the Kavya Kaustubha (a book of selected 
+Sanskrit verses for Vaishnavas); the Aishvarya Kadambini; Vyakarana Kaumudi 
+(a book on grammar); Padakaustubha (selected prayers); commentaries on 
+important Upanishads beginning with the Isha Upanishad and including the 
+Gopala Tapani Upanishad; a commentary on Bhagavad-gita known as 
+Gitabhushana Bhashya; as well as commentaries on: Vishnu-Sahasra-nama,  
+Shrimad-Bhagavatam (Vaishnava-nandini-tika), Jiva Goswami's Tattva
+Sandarbha, Rupa Goswami's Stavamala, Nata-chandrika, Jayadeva Goswami's 
+Chandraloka, his own Sahitya Kaumudi, Laghu-bhagavatamrita, Nataka
+Chandrika, and Shyamananda Shataka.  
+<br>
+<br>
+ Shri Baladeva Vidyabhusana 
+disappeared in the Christian year 1768
+<br>
+<br>
+   </P>
+    </div>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+   <div id="g" style="text-align: center;font: bold;"> Yashoda-jivan-Das <br>📞 7874236503 <br> ✉ sriradheshyam07@gmail.com</div>
+    </body>
+</html>
